@@ -1,0 +1,211 @@
+<mujoco model="tracy">
+  <compiler angle="radian" meshdir="flattened_meshes/" autolimits="true" balanceinertia="true"/>
+
+  <visual>
+    <global offwidth="1920" offheight="1080"/>
+  </visual>
+
+  <default>
+    <default class="right_ur10e">
+      <material specular="0.5" shininess="0.25"/>
+      <joint axis="0 1 0" range="-6.28319 6.28319" armature="0.1"/>
+      <position ctrlrange="-6.2831 6.2831"/>
+      <general biastype="affine" ctrlrange="-6.2831 6.2831" gainprm="5000" biasprm="0 -5000 -500"/>
+      <default class="right_size4"><joint damping="10"/><general forcerange="-330 330"/></default>
+      <default class="right_size3"><joint damping="5"/><general forcerange="-150 150"/></default>
+      <default class="right_size2"><joint damping="2"/><general forcerange="-56 56"/></default>
+      <default class="right_visual"><geom type="mesh" contype="0" conaffinity="0" group="1"/></default>
+    </default>
+
+    <default class="left_ur10e">
+      <material specular="0.5" shininess="0.25"/>
+      <joint axis="0 1 0" range="-6.28319 6.28319" armature="0.1"/>
+      <position ctrlrange="-6.2831 6.2831"/>
+      <general biastype="affine" ctrlrange="-6.2831 6.2831" gainprm="5000" biasprm="0 -5000 -500"/>
+      <default class="left_size4"><joint damping="10"/><general forcerange="-330 330"/></default>
+      <default class="left_size3"><joint damping="5"/><general forcerange="-150 150"/></default>
+      <default class="left_size2"><joint damping="2"/><general forcerange="-56 56"/></default>
+      <default class="left_visual"><geom type="mesh" contype="0" conaffinity="0" group="1"/></default>
+    </default>
+    
+  
+  <default class="2f85">
+    <mesh scale="0.001 0.001 0.001"/>
+    <general biastype="affine"/>
+
+    <joint axis="1 0 0"/>
+    <default class="driver">
+      <joint range="0 0.8" armature="0.005" damping="0.1" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1"/>
+    </default>
+    <default class="follower">
+      <joint range="-0.872664 0.872664" armature="0.001" pos="0 -0.018 0.0065" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1"/>
+    </default>
+    <default class="spring_link">
+      <joint range="-0.29670597283 0.8" armature="0.001" stiffness="0.05" springref="2.62" damping="0.00125"/>
+    </default>
+    <default class="coupler">
+      <joint range="-1.57 0" armature="0.001" solimplimit="0.95 0.99 0.001" solreflimit="0.005 1"/>
+    </default>
+
+    <default class="visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+    </default>
+    <default class="collision">
+      <geom type="mesh" group="3"/>
+      <default class="pad_box1">
+        <geom mass="0" type="box" pos="0 -0.0026 0.028125" size="0.011 0.004 0.009375" friction="0.7"
+          solimp="0.95 0.99 0.001" solref="0.004 1" priority="1" rgba="0.55 0.55 0.55 1"/>
+      </default>
+      <default class="pad_box2">
+        <geom mass="0" type="box" pos="0 -0.0026 0.009375" size="0.011 0.004 0.009375" friction="0.6"
+          solimp="0.95 0.99 0.001" solref="0.004 1" priority="1" rgba="0.45 0.45 0.45 1"/>
+      </default>
+    </default>
+  </default>
+  </default>
+
+  <asset>
+    <material name="grey" rgba="0.792 0.820 0.933 1" />
+    <mesh name="table_mesh" file="tracebot_setup_w_adapter_at_origin.stl" scale="0.001 0.001 0.001" />
+    <material name="right_black" rgba="0.033 0.033 0.033 1"/><material name="right_jointgray" rgba="0.278 0.278 0.278 1"/><material name="right_linkgray" rgba="0.82 0.82 0.82 1"/><material name="right_urblue" rgba="0.49 0.678 0.8 1"/>
+    <material name="black" rgba="0.033 0.033 0.033 1"/><material name="jointgray" rgba="0.278 0.278 0.278 1"/><material name="linkgray" rgba="0.82 0.82 0.82 1"/><material name="urblue" rgba="0.49 0.678 0.8 1"/>
+
+    <mesh name="right_base_0" file="base_0.obj"/><mesh name="right_base_1" file="base_1.obj"/><mesh name="right_shoulder_0" file="shoulder_0.obj"/><mesh name="right_shoulder_1" file="shoulder_1.obj"/><mesh name="right_shoulder_2" file="shoulder_2.obj"/><mesh name="right_upperarm_0" file="upperarm_0.obj"/><mesh name="right_upperarm_1" file="upperarm_1.obj"/><mesh name="right_upperarm_2" file="upperarm_2.obj"/><mesh name="right_upperarm_3" file="upperarm_3.obj"/><mesh name="right_forearm_0" file="forearm_0.obj"/><mesh name="right_forearm_1" file="forearm_1.obj"/><mesh name="right_forearm_2" file="forearm_2.obj"/><mesh name="right_forearm_3" file="forearm_3.obj"/><mesh name="right_wrist1_0" file="wrist1_0.obj"/><mesh name="right_wrist1_1" file="wrist1_1.obj"/><mesh name="right_wrist1_2" file="wrist1_2.obj"/><mesh name="right_wrist2_0" file="wrist2_0.obj"/><mesh name="right_wrist2_1" file="wrist2_1.obj"/><mesh name="right_wrist2_2" file="wrist2_2.obj"/><mesh name="right_wrist3" file="wrist3.obj"/>
+    <mesh name="left_base_0" file="base_0.obj"/><mesh name="left_base_1" file="base_1.obj"/><mesh name="left_shoulder_0" file="shoulder_0.obj"/><mesh name="left_shoulder_1" file="shoulder_1.obj"/><mesh name="left_shoulder_2" file="shoulder_2.obj"/><mesh name="left_upperarm_0" file="upperarm_0.obj"/><mesh name="left_upperarm_1" file="upperarm_1.obj"/><mesh name="left_upperarm_2" file="upperarm_2.obj"/><mesh name="left_upperarm_3" file="upperarm_3.obj"/><mesh name="left_forearm_0" file="forearm_0.obj"/><mesh name="left_forearm_1" file="forearm_1.obj"/><mesh name="left_forearm_2" file="forearm_2.obj"/><mesh name="left_forearm_3" file="forearm_3.obj"/><mesh name="left_wrist1_0" file="wrist1_0.obj"/><mesh name="left_wrist1_1" file="wrist1_1.obj"/><mesh name="left_wrist1_2" file="wrist1_2.obj"/><mesh name="left_wrist2_0" file="wrist2_0.obj"/><mesh name="left_wrist2_1" file="wrist2_1.obj"/><mesh name="left_wrist2_2" file="wrist2_2.obj"/><mesh name="left_wrist3" file="wrist3.obj"/>
+    <mesh class="2f85" file="base_mount.stl"/><mesh class="2f85" file="base.stl"/><mesh class="2f85" file="driver.stl"/><mesh class="2f85" file="coupler.stl"/><mesh class="2f85" file="follower.stl"/><mesh class="2f85" file="pad.stl"/><mesh class="2f85" file="silicone_pad.stl"/><mesh class="2f85" file="spring_link.stl"/>
+
+    <mesh name="canister" file="canister.stl"/>
+    <mesh name="d455" file="d455.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="BottleLarge" file="BottleLargeRinseFluidA.stl"/>
+    <mesh name="Pump" file="Pump.stl"/>
+    <mesh name="Needle" file="Needle.stl"/>
+    <mesh name="NeedleCap" file="NeedleCap.stl"/>
+    <mesh name="BottleMedium" file="BottleMediumRinseFluidK.stl"/>
+    <mesh name="BottleSmall" file="BottleSmallSoyBroth.stl"/>
+  </asset>
+
+  <worldbody>
+    <light pos="0 0 3" dir="0 0 -1" diffuse="1 1 1"/>
+
+    <body name="yellow_floor" pos="0 0 -0.1">
+        <geom type="box" size="3.5 3.5 0.1" rgba="1 1 0 1" contype="1" conaffinity="1" />
+    </body>
+
+    <body name="map" pos="0 0 0">
+      <body name="table" pos="0 0 0.88">
+        <geom name="table_visual" type="mesh" mesh="table_mesh" material="grey" group="1" contype="0" conaffinity="0"/>
+        <geom name="table_collision" type="box" size="0.6 0.8 0.02"  pos="0.6 0 -0.02"  rgba="0.792 0.820 0.933 1" group="0" friction="1 0.005 0.0001"/>
+        <body name="camera_pole" pos="0.29 0.0 0.0">
+          <geom name="pole_base" type="box" size="0.06 0.2275 0.02" pos="0 0 0.02" material="grey" group="1"/>
+          <geom name="pole_stick" type="box" size="0.02 0.02 0.5" pos="0 0 0.54" material="grey" group="1"/>
+          <geom name="pole_support" type="box" size="0.02 0.1 0.04" pos="0 0 0.08" material="grey" group="1"/>
+
+          <body name="camera_mount" pos="0.0 0.0 0.92">
+            <body name="camera_link" pos="0.01 0.0 -0.026" euler="0.0484812 1.25792843 0.057068">
+              <body name="d455_mesh_visual" pos="0.02 0 0" quat="0.1947 -0.6799 0.6799 -0.1947">
+                <camera name="d435_camera" pos="0 0 0" mode="fixed" fovy="58" quat="0 0 1 0"/>
+                <geom type="mesh" mesh="d455" rgba="0.8 0 0 1" contype="0" conaffinity="0" group="1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+
+        <body name="right_arm_mount" pos="0.135 -0.050925 0.173" quat="0.866025 0.5 0 0">
+          <include file="ur10e_right.xml"/>
+        </body>
+        <body name="left_arm_mount" pos="0.135 0.050925 0.173" quat="0.866025 -0.5 0 0">
+          <include file="ur10e_left.xml"/>
+        </body>
+      </body>
+    </body>
+
+    <body name="canister" pos="0.6 0 0.2">
+        <freejoint name="canister_freejoint"/>
+        <geom type="mesh" mesh="canister" rgba="0.3 0.3 1.0 0.4" contype="1" conaffinity="1"/>
+    </body>
+
+    <body name="BottleLarge" pos="-0.2 0 0.4">
+        <freejoint name="BottleLarge_freejoint"/>
+        <geom type="mesh" mesh="BottleLarge" contype="1" rgba="0.7 0.7 0.70 0.4" conaffinity="1"/>
+    </body>
+
+    <body name="Needle" pos="0.8 1.0 0.4">
+        <freejoint name="Needle_freejoint"/>
+        <geom type="mesh" mesh="Needle" contype="1" rgba="0.98 0. 0.98 1.0" conaffinity="1"/>
+    </body>
+
+    <body name="NeedleCap" pos="0.8 1.2 0.4">
+        <freejoint name="NeedleCap_freejoint"/>
+        <geom type="mesh" mesh="NeedleCap" rgba="0.7 0.7 1.0 0.6" contype="1" conaffinity="1"/>
+    </body>
+
+    <body name="BottleMedium" pos="-0.2 -1.0 0.4">
+        <freejoint name="BottleMedium_freejoint"/>
+        <geom type="mesh" mesh="BottleMedium" contype="1" rgba="0.3 0.3 3.0 0.4" conaffinity="1"/>
+    </body>
+
+    <body name="BottleSmall" pos="-0.2 1.0 0.4">
+        <freejoint name="BottleSmall_freejoint"/>
+        <geom type="mesh" mesh="BottleSmall" contype="1" rgba="0.3 1.0 0.3 0.4" conaffinity="1"/>
+    </body>
+
+    <body name="Pump" pos="1. 0.0 1.15" quat="0.707107 0 0 -0.707107">
+        <geom type="mesh" mesh="Pump" rgba="0.9 0.9 0.9 0.8" contype="1" conaffinity="1"/>
+    </body>
+
+</worldbody>
+
+
+
+
+<tendon>
+  <fixed name="right_split">
+    <joint joint="right_right_driver_joint" coef="0.5"/>
+    <joint joint="right_left_driver_joint"  coef="0.5"/>
+  </fixed>
+
+  <fixed name="left_split">
+    <joint joint="left_right_driver_joint" coef="0.5"/>
+    <joint joint="left_left_driver_joint"  coef="0.5"/>
+  </fixed>
+</tendon>
+
+
+<equality>
+  <connect anchor="0 0 0" body1="right_right_follower" body2="right_right_coupler" solimp="0.95 0.99 0.001" solref="0.005 1"/>
+  <connect anchor="0 0 0" body1="right_left_follower"  body2="right_left_coupler"  solimp="0.95 0.99 0.001" solref="0.005 1"/>
+
+  <connect anchor="0 0 0" body1="left_right_follower"  body2="left_right_coupler"  solimp="0.95 0.99 0.001" solref="0.005 1"/>
+  <connect anchor="0 0 0" body1="left_left_follower"   body2="left_left_coupler"   solimp="0.95 0.99 0.001" solref="0.005 1"/>
+
+  <joint joint1="right_right_driver_joint" joint2="right_left_driver_joint" polycoef="0 1 0 0 0" solimp="0.95 0.99 0.001" solref="0.005 1"/>
+  <joint joint1="left_right_driver_joint"  joint2="left_left_driver_joint"  polycoef="0 1 0 0 0" solimp="0.95 0.99 0.001" solref="0.005 1"/>
+</equality>
+
+  <actuator>
+    <general class="right_size4" name="right_shoulder_pan" joint="right_shoulder_pan_joint"/>
+    <general class="right_size4" name="right_shoulder_lift" joint="right_shoulder_lift_joint"/>
+    <general class="right_size3" name="right_elbow" joint="right_elbow_joint"/>
+    <general class="right_size2" name="right_wrist_1" joint="right_wrist_1_joint"/>
+    <general class="right_size2" name="right_wrist_2" joint="right_wrist_2_joint"/>
+    <general class="right_size2" name="right_wrist_3" joint="right_wrist_3_joint"/>
+    <general class="left_size4" name="left_shoulder_pan" joint="left_shoulder_pan_joint"/>
+    <general class="left_size4" name="left_shoulder_lift" joint="left_shoulder_lift_joint"/>
+    <general class="left_size3" name="left_elbow" joint="left_elbow_joint"/>
+    <general class="left_size2" name="left_wrist_1" joint="left_wrist_1_joint"/>
+    <general class="left_size2" name="left_wrist_2" joint="left_wrist_2_joint"/>
+    <general class="left_size2" name="left_wrist_3" joint="left_wrist_3_joint"/>
+    
+    <general class="2f85" name="right_fingers_actuator" tendon="right_split" forcerange="-5 5" ctrlrange="0 255"
+    gainprm="0.3137255 0 0" biasprm="0 -100 -10"/>
+
+  <general class="2f85" name="left_fingers_actuator" tendon="left_split" forcerange="-5 5" ctrlrange="0 255"
+    gainprm="0.3137255 0 0" biasprm="0 -100 -10"/>
+   </actuator>
+  
+ <keyframe>
+  <key name="home" 
+       qpos="-1.5708 -1.5708 1.5708 -1.5708 -1.5708 0 0 0 0 0 0 0 -1.5708 -1.5708 1.5708 -1.5708 -1.5708 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" 
+       ctrl="-1.5708 -1.5708 1.5708 -1.5708 -1.5708 0 0 -1.5708 -1.5708 1.5708 -1.5708 -1.5708 0 0"/>
+</keyframe>
+</mujoco>

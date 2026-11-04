@@ -1,0 +1,45 @@
+<mujocoinclude>
+  <body name="right_base" childclass="right_ur10e">
+    <geom mesh="right_base_0" material="right_black" class="right_visual"/>
+    <geom mesh="right_base_1" material="right_jointgray" class="right_visual"/>
+    <body name="right_shoulder_link" pos="0 0 0.181">
+      <joint name="right_shoulder_pan_joint" class="right_size4" axis="0 0 1"/>
+      <geom mesh="right_shoulder_0" material="right_urblue" class="right_visual"/>
+      <geom mesh="right_shoulder_1" material="right_black" class="right_visual"/>
+      <geom mesh="right_shoulder_2" material="right_jointgray" class="right_visual"/>
+      <body name="right_upper_arm_link" pos="0 0.176 0" quat="1 0 1 0">
+        <joint name="right_shoulder_lift_joint" class="right_size4"/>
+        <geom mesh="right_upperarm_0" material="right_black" class="right_visual"/>
+        <geom mesh="right_upperarm_1" material="right_jointgray" class="right_visual"/>
+        <geom mesh="right_upperarm_2" material="right_urblue" class="right_visual"/>
+        <geom mesh="right_upperarm_3" material="right_linkgray" class="right_visual"/>
+        <body name="right_forearm_link" pos="0 -0.137 0.613">
+          <joint name="right_elbow_joint" class="right_size3"/>
+          <geom mesh="right_forearm_0" material="right_urblue" class="right_visual"/>
+          <geom mesh="right_forearm_1" material="right_black" class="right_visual"/>
+          <geom mesh="right_forearm_2" material="right_jointgray" class="right_visual"/>
+          <geom mesh="right_forearm_3" material="right_linkgray" class="right_visual"/>
+          <body name="right_wrist_1_link" pos="0 0 0.571" quat="1 0 1 0">
+            <joint name="right_wrist_1_joint" class="right_size2"/>
+            <geom mesh="right_wrist1_0" material="right_black" class="right_visual"/>
+            <geom mesh="right_wrist1_1" material="right_urblue" class="right_visual"/>
+            <geom mesh="right_wrist1_2" material="right_jointgray" class="right_visual"/>
+            <body name="right_wrist_2_link" pos="0 0.135 0">
+              <joint name="right_wrist_2_joint" axis="0 0 1" class="right_size2"/>
+              <geom mesh="right_wrist2_0" material="right_black" class="right_visual"/>
+              <geom mesh="right_wrist2_1" material="right_urblue" class="right_visual"/>
+              <geom mesh="right_wrist2_2" material="right_jointgray" class="right_visual"/>
+              <body name="right_wrist_3_link" pos="0 0 0.12">
+                <joint name="right_wrist_3_joint" class="right_size2"/>
+                <geom material="right_linkgray" mesh="right_wrist3" class="right_visual"/>
+                <body name="right_gripper_attach" pos="0 0.1 0" quat="0.707107 -0.707107 0  0">
+                    <include file="right_gripper.xml"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </body>
+</mujocoinclude>

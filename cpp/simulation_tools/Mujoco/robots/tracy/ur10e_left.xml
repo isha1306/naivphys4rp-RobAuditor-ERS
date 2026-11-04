@@ -1,0 +1,45 @@
+<mujocoinclude>
+  <body name="left_base" childclass="left_ur10e">
+    <geom mesh="left_base_0" material="black" class="left_visual"/>
+    <geom mesh="left_base_1" material="jointgray" class="left_visual"/>
+    <body name="left_shoulder_link" pos="0 0 0.181" quat="0 0 0 1">
+      <joint name="left_shoulder_pan_joint" class="left_size4" axis="0 0 1"/>
+      <geom mesh="left_shoulder_0" material="urblue" class="left_visual"/>
+      <geom mesh="left_shoulder_1" material="black" class="left_visual"/>
+      <geom mesh="left_shoulder_2" material="jointgray" class="left_visual"/>
+      <body name="left_upper_arm_link" pos="0 0.176 0" quat="0.707 0 0.707 0">
+        <joint name="left_shoulder_lift_joint" class="left_size4"/>
+        <geom mesh="left_upperarm_0" material="black" class="left_visual"/>
+        <geom mesh="left_upperarm_1" material="jointgray" class="left_visual"/>
+        <geom mesh="left_upperarm_2" material="urblue" class="left_visual"/>
+        <geom mesh="left_upperarm_3" material="linkgray" class="left_visual"/>
+        <body name="left_forearm_link" pos="0 -0.137 0.613">
+          <joint name="left_elbow_joint" class="left_size3"/>
+          <geom mesh="left_forearm_0" material="urblue" class="left_visual"/>
+          <geom mesh="left_forearm_1" material="black" class="left_visual"/>
+          <geom mesh="left_forearm_2" material="jointgray" class="left_visual"/>
+          <geom mesh="left_forearm_3" material="linkgray" class="left_visual"/>
+          <body name="left_wrist_1_link" pos="0 0 0.571" quat="1 0 1 0">
+            <joint name="left_wrist_1_joint" class="left_size2"/>
+            <geom mesh="left_wrist1_0" material="black" class="left_visual"/>
+            <geom mesh="left_wrist1_1" material="urblue" class="left_visual"/>
+            <geom mesh="left_wrist1_2" material="jointgray" class="left_visual"/>
+            <body name="left_wrist_2_link" pos="0 0.135 0">
+              <joint name="left_wrist_2_joint" axis="0 0 1" class="left_size2"/>
+              <geom mesh="left_wrist2_0" material="black" class="left_visual"/>
+              <geom mesh="left_wrist2_1" material="urblue" class="left_visual"/>
+              <geom mesh="left_wrist2_2" material="jointgray" class="left_visual"/>
+              <body name="left_wrist_3_link" pos="0 0 0.12">
+                <joint name="left_wrist_3_joint" class="left_size2"/>
+                <geom material="linkgray" mesh="left_wrist3" class="left_visual"/>
+                <body name="left_gripper_attach" pos="0 0.1 0" quat="0.707107 -0.707107 0 0">
+                    <include file="left_gripper.xml"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </body>
+</mujocoinclude>
