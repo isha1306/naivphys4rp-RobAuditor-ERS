@@ -1,0 +1,13 @@
+scenario,condition,status,validated,action_count,actions,strategies,accepted_verifiers,rejected_verifier_count,rejected_verifiers,confidence_score,risk_score,plan_score,elapsed_ms,message
+S1_parameter_conflict,E1_single,VALIDATED,True,1,return_to_waypoint,GOB,kinematics_verifier,0,{},0.92,0.2,0.36,0.1054,A recovery plan passed validation.
+S1_parameter_conflict,E2_naive,VALIDATED,True,3,return_to_waypoint|return_to_waypoint|hold_robot,GOB|ESS,kinematics_verifier|task_logic_verifier|safety_verifier,0,{},0.8466666666666667,0.2,,0.1368,
+S1_parameter_conflict,E3_ensemble,VALIDATED,True,2,return_to_waypoint|hold_robot,GOB|ESS,kinematics_verifier|safety_verifier,1,"{""task_logic_verifier"": ""Conflicts with higher-priority suggestion(s): kinematics_verifier""}",0.88,0.2,0.3,0.1169,A recovery plan passed validation.
+S2_explicit_conflict,E1_single,VALIDATED,True,1,return_to_waypoint,GOB,kinematics_verifier,0,{},0.88,0.2,0.33999999999999997,0.0434,A recovery plan passed validation.
+S2_explicit_conflict,E2_naive,VALIDATED,True,3,return_to_waypoint|replan_approach|hold_robot,GOB|INA|ESS,kinematics_verifier|task_logic_verifier|safety_verifier,0,{},0.87,0.2,,0.0737,
+S2_explicit_conflict,E3_ensemble,VALIDATED,True,2,hold_robot|return_to_waypoint,ESS|GOB,safety_verifier|kinematics_verifier,1,"{""task_logic_verifier"": ""Conflicts with higher-priority suggestion(s): kinematics_verifier""}",0.895,0.2,0.3075,0.0756,A recovery plan passed validation.
+S3_compatible,E1_single,VALIDATED,True,1,return_to_waypoint,GOB,kinematics_verifier,0,{},0.86,0.2,0.32999999999999996,0.068,A recovery plan passed validation.
+S3_compatible,E2_naive,VALIDATED,True,3,return_to_waypoint|replan_insertion|verify_clearance,GOB|INA|ESS,kinematics_verifier|task_logic_verifier|safety_verifier,0,{},0.8633333333333333,0.2,,0.092,
+S3_compatible,E3_ensemble,VALIDATED,True,3,verify_clearance|return_to_waypoint|replan_insertion,ESS|GOB|INA,safety_verifier|kinematics_verifier|task_logic_verifier,0,{},0.8633333333333333,0.2,0.25166666666666665,0.083,A recovery plan passed validation.
+S4_risk_rejection,E1_single,VALIDATED,True,1,return_to_waypoint,GOB,kinematics_verifier,0,{},0.87,0.2,0.33499999999999996,0.035,A recovery plan passed validation.
+S4_risk_rejection,E2_naive,VALIDATED,True,2,return_to_waypoint|hold_robot,GOB|ESS,kinematics_verifier|safety_verifier,1,"{""task_logic_verifier"": ""reject: Risk score 0.92 exceeds the allowed threshold 0.70.""}",0.88,0.2,,0.0662,
+S4_risk_rejection,E3_ensemble,VALIDATED,True,2,hold_robot|return_to_waypoint,ESS|GOB,safety_verifier|kinematics_verifier,1,"{""task_logic_verifier"": ""Risk assessment: reject. Risk score 0.92 exceeds the allowed threshold 0.70.""}",0.88,0.2,0.3,0.063,A recovery plan passed validation.

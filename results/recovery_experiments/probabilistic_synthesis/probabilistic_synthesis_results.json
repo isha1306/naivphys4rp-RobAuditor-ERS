@@ -1,0 +1,1042 @@
+{
+  "experiment": "deterministic_vs_probabilistic_recovery_synthesis",
+  "description": "Same synthetic verifier conflict; compare one-plan mode with five-candidate probabilistic mode over fixed random seeds.",
+  "configuration": {
+    "selection_policy": "consensus",
+    "single_candidate_count": 1,
+    "multi_candidate_limit": 5,
+    "sampling_temperature": 0.15,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "verifiers": [
+      "kinematics_verifier",
+      "task_logic_verifier",
+      "object_state_verifier"
+    ]
+  },
+  "single_plan_run": {
+    "mode": "single_plan",
+    "seed": 0,
+    "status": "VALIDATED",
+    "selected_candidate_id": "recovery-17fefbc3",
+    "selected_signature": "move_robot:{\"direction\": \"right\"}",
+    "candidate_count": 1,
+    "validated_candidate_count": 1,
+    "candidate_rows": [
+      {
+        "candidate_id": "recovery-17fefbc3",
+        "signature": "move_robot:{\"direction\": \"right\"}",
+        "status": "VALIDATED",
+        "score": 0.3375,
+        "probability": 1.0
+      }
+    ],
+    "selection_probabilities": {
+      "recovery-17fefbc3": 1.0
+    },
+    "message": "A recovery plan passed validation.",
+    "rejected_reasons": []
+  },
+  "multi_candidate_runs": 30,
+  "multi_candidate_all_validated": true,
+  "multi_candidate_min_validated": 2,
+  "multi_candidate_max_validated": 2,
+  "distinct_validated_plan_signatures": [
+    "move_robot:{\"direction\": \"left\"}",
+    "move_robot:{\"direction\": \"right\"}"
+  ],
+  "selection_counts": {
+    "move_robot:{\"direction\": \"right\"}": 13,
+    "move_robot:{\"direction\": \"left\"}": 17
+  },
+  "selection_frequencies": {
+    "move_robot:{\"direction\": \"right\"}": 0.43333333333333335,
+    "move_robot:{\"direction\": \"left\"}": 0.5666666666666667
+  },
+  "interpretation_note": "Frequencies are empirical outcomes of this finite seeded sample, not calibrated real-world success probabilities. The inputs are synthetic and no robot actions are executed.",
+  "runs": [
+    {
+      "mode": "single_plan",
+      "seed": 0,
+      "status": "VALIDATED",
+      "selected_candidate_id": "recovery-17fefbc3",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 1,
+      "validated_candidate_count": 1,
+      "candidate_rows": [
+        {
+          "candidate_id": "recovery-17fefbc3",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 1.0
+        }
+      ],
+      "selection_probabilities": {
+        "recovery-17fefbc3": 1.0
+      },
+      "message": "A recovery plan passed validation.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 0,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 1,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 2,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 3,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 4,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 5,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 6,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 7,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 8,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 9,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 10,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 11,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 12,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 13,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 14,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 15,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 16,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 17,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 18,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 19,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 20,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 21,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 22,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 23,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 24,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 25,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 26,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 27,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-d6003fe64a",
+      "selected_signature": "move_robot:{\"direction\": \"right\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 28,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    },
+    {
+      "mode": "multi_candidate",
+      "seed": 29,
+      "status": "VALIDATED",
+      "selected_candidate_id": "candidate-679944580e",
+      "selected_signature": "move_robot:{\"direction\": \"left\"}",
+      "candidate_count": 2,
+      "validated_candidate_count": 2,
+      "candidate_rows": [
+        {
+          "candidate_id": "candidate-679944580e",
+          "signature": "move_robot:{\"direction\": \"left\"}",
+          "status": "VALIDATED",
+          "score": 0.375,
+          "probability": 0.5560138905446199
+        },
+        {
+          "candidate_id": "candidate-d6003fe64a",
+          "signature": "move_robot:{\"direction\": \"right\"}",
+          "status": "VALIDATED",
+          "score": 0.3375,
+          "probability": 0.44398610945538014
+        }
+      ],
+      "selection_probabilities": {
+        "candidate-679944580e": 0.5560138905446199,
+        "candidate-d6003fe64a": 0.44398610945538014
+      },
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling.",
+      "rejected_reasons": []
+    }
+  ]
+}

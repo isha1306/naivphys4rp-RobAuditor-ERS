@@ -1,0 +1,43 @@
+[scene] retained: Tracy robot + table/floor + canister1 + replacement canister + Pump1/Pump2
+[scene] removed unrelated bodies: canister2, BottleLarge, Needle, NeedleCap, BottleMedium, BottleSmall, expected_inserted_canister1, expected_inserted_canister2, needle_cap, needle_tool
+[scene] tray collision boxes preserved (Pump1/Pump2)
+[warning] Could not save perception image canister_tray_perception.png: No module named 'PIL'
+[perception] canister centre: [0.4994 0.499  0.9429] m
+[perception] selected opening: Pump1
+
+[plan] selected left arm
+[motion] pre-pick: reached (0.6 mm)
+[motion] grasp: reached (1.3 mm)
+[grasp] activated kinematic simulator attachment for canister1 from measured grasp pose
+[motion] lift: reached (0.6 mm)
+[verification] canister lifted by 0.148 m
+[transfer] staged loaded path: 18 segments, distance=0.775 m, step<=0.045 m
+[motion] loaded-transfer-1/18: reached (2.3 mm)
+[motion] loaded-transfer-2/18: reached (2.3 mm)
+[motion] loaded-transfer-3/18: reached (2.3 mm)
+[motion] loaded-transfer-4/18: reached (2.2 mm)
+[motion] loaded-transfer-5/18: reached (2.1 mm)
+[motion] loaded-transfer-6/18: reached (2.0 mm)
+[motion] loaded-transfer-7/18: reached (2.0 mm)
+[motion] loaded-transfer-8/18: reached (2.0 mm)
+[motion] loaded-transfer-9/18: reached (2.0 mm)
+[motion] loaded-transfer-10/18: reached (1.9 mm)
+[motion] loaded-transfer-11/18: reached (1.9 mm)
+[motion] loaded-transfer-12/18: reached (1.9 mm)
+[motion] loaded-transfer-13/18: reached (1.8 mm)
+[motion] loaded-transfer-14/18: reached (1.8 mm)
+[motion] loaded-transfer-15/18: reached (1.7 mm)
+[motion] loaded-transfer-16/18: reached (1.6 mm)
+[motion] loaded-transfer-17/18: reached (1.6 mm)
+[motion] loaded-transfer-18/18: reached (1.6 mm)
+[motion] insert: reached (3.9 mm)
+[motion] post-release retreat: reached (4.2 mm)
+
+[result]
+  canister final centre : [ 0.885  -0.1686  0.947 ] m
+  target centre         : [ 0.8875 -0.1713  0.945 ] m
+  XY centre error       : 3.6 mm
+  Z centre error        : 2.0 mm
+[success] canister is placed within the selected tray opening tolerance
+[home] returning left arm to its original joint position
+[home] maximum joint position error: 0.000000 rad

@@ -1,0 +1,9 @@
+scenario,failure_stage,expected_strategy,expected_action,passed,return_code,elapsed_seconds,missing_checks,log_file
+baseline,,,,True,0,2.1434,,results/recovery_experiments/automated_regression/baseline.log
+GOB_grasp,grasp,GOB,return_to_pre_grasp,True,0,0.9986,,results/recovery_experiments/automated_regression/GOB_grasp.log
+GBB_transfer,transfer,GBB,return_to_last_safe_waypoint,True,0,0.9678,,results/recovery_experiments/automated_regression/GBB_transfer.log
+INA_pre_grasp,pre_grasp,INA,replan_pre_grasp,True,0,0.8809,,results/recovery_experiments/automated_regression/INA_pre_grasp.log
+ESS_lift,lift,ESS,stop_robot,True,0,0.9826,,results/recovery_experiments/automated_regression/ESS_lift.log
+INA_insertion,insertion,INA,replan_insertion,True,0,1.0066,,results/recovery_experiments/automated_regression/INA_insertion.log
+GOB_placement,placement,GOB,return_to_placement_waypoint,True,0,1.0709,,results/recovery_experiments/automated_regression/GOB_placement.log
+INO_object_unavailable,object_unavailable,INO,introduce_replacement_canister,True,0,2.0758,,results/recovery_experiments/automated_regression/INO_object_unavailable.log

@@ -1,0 +1,5 @@
+case,E1_status,E1_actions,E2_action_count,E2_conflict_pair_count,E2_over_threshold_risk,E3_status,E3_actions,E3_accepted_verifiers,E3_rejected_verifiers,E3_risk_score
+consensus,VALIDATED,return_to_pre_grasp,3,0,False,VALIDATED,return_to_pre_grasp,3,0,0.2
+conflicting_actions,VALIDATED,move_robot,3,1,False,VALIDATED,move_robot;hold_position,2,1,0.2
+high_risk_vs_low_risk,HUMAN_INTERVENTION,,2,0,True,VALIDATED,conservative_recovery,1,1,0.1
+incomplete_recommendations,HUMAN_INTERVENTION,,0,0,False,HUMAN_INTERVENTION,,0,0,

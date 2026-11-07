@@ -1,0 +1,39 @@
+[scene] retained: Tracy robot + table/floor + canister1 + replacement canister + Pump1/Pump2
+[scene] removed unrelated bodies: canister2, BottleLarge, Needle, NeedleCap, BottleMedium, BottleSmall, expected_inserted_canister1, expected_inserted_canister2, needle_cap, needle_tool
+[scene] tray collision boxes preserved (Pump1/Pump2)
+[warning] Could not save perception image canister_tray_perception.png: No module named 'PIL'
+[perception] canister centre: [0.4994 0.499  0.9429] m
+[perception] selected opening: Pump1
+
+[plan] selected left arm
+[failure-injection] Injecting failure at stage: pre_grasp
+\n[failure] Simulation interrupted: Injected failure at stage 'pre_grasp' (failure_id=injected_pre_grasp)
+
+[recovery] injected failure: injected_pre_grasp
+[recovery] synthetic verifier results: 3
+[recovery] verifier: kinematics_verifier Ds: FAIL Cf: 0.94 Ed: Synthetic motion feasibility verifier detected the injected pre_grasp failure. Er: INA
+[recovery] quadruplet: {'verifier_id': 'kinematics_verifier', 'Ds': {'decision': False, 'label': 'FAIL'}, 'Cf': {'confidence': 0.94}, 'Ed': {'text': 'Synthetic motion feasibility verifier detected the injected pre_grasp failure.', 'evidence': {'failure_id': 'injected_pre_grasp', 'failure_stage': 'pre_grasp', 'synthetic_fixture': True, 'focus': 'motion feasibility', 'source': 'deterministic_simulation_injector'}, 'visual_evidence': [], 'metadata': {'format': 'text', 'evidence_origin': 'synthetic_simulation_fixture', 'visual_observation_available': False}}, 'Er': {'strategy': 'INA', 'actions': [{'name': 'replan_pre_grasp', 'parameters': {}, 'description': 'Synthetic recovery action for ensemble adapter testing.', 'estimated_risk': 0.2}], 'failure_type': 'pre_grasp_failure'}}
+[recovery] verifier: task_logic_verifier Ds: FAIL Cf: 0.91 Ed: Synthetic task-sequence consistency verifier detected the injected pre_grasp failure. Er: INA
+[recovery] quadruplet: {'verifier_id': 'task_logic_verifier', 'Ds': {'decision': False, 'label': 'FAIL'}, 'Cf': {'confidence': 0.91}, 'Ed': {'text': 'Synthetic task-sequence consistency verifier detected the injected pre_grasp failure.', 'evidence': {'failure_id': 'injected_pre_grasp', 'failure_stage': 'pre_grasp', 'synthetic_fixture': True, 'focus': 'task-sequence consistency', 'source': 'deterministic_simulation_injector'}, 'visual_evidence': [], 'metadata': {'format': 'text', 'evidence_origin': 'synthetic_simulation_fixture', 'visual_observation_available': False}}, 'Er': {'strategy': 'INA', 'actions': [{'name': 'replan_pre_grasp', 'parameters': {}, 'description': 'Synthetic recovery action for ensemble adapter testing.', 'estimated_risk': 0.2}], 'failure_type': 'pre_grasp_failure'}}
+[recovery] verifier: object_state_verifier Ds: FAIL Cf: 0.88 Ed: Synthetic object and scene state verifier detected the injected pre_grasp failure. Er: INA
+[recovery] quadruplet: {'verifier_id': 'object_state_verifier', 'Ds': {'decision': False, 'label': 'FAIL'}, 'Cf': {'confidence': 0.88}, 'Ed': {'text': 'Synthetic object and scene state verifier detected the injected pre_grasp failure.', 'evidence': {'failure_id': 'injected_pre_grasp', 'failure_stage': 'pre_grasp', 'synthetic_fixture': True, 'focus': 'object and scene state', 'source': 'deterministic_simulation_injector'}, 'visual_evidence': [], 'metadata': {'format': 'text', 'evidence_origin': 'synthetic_simulation_fixture', 'visual_observation_available': False}}, 'Er': {'strategy': 'INA', 'actions': [{'name': 'replan_pre_grasp', 'parameters': {}, 'description': 'Synthetic recovery action for ensemble adapter testing.', 'estimated_risk': 0.2}], 'failure_type': 'pre_grasp_failure'}}
+[recovery] test strategy: INA
+[recovery] manager status: VALIDATED
+[recovery] message: A recovery plan passed validation.
+[recovery] proposed actions:
+  - replan_pre_grasp
+[recovery] plan status: VALIDATED
+[recovery] accepted verifier suggestions: 3
+[recovery] actions were NOT executed.
+[recovery-execution] attempting validated INA recovery
+[recovery-execution] INA adding raised pre-grasp staging waypoint
+[motion] INA-raised-staging-waypoint: reached (4.4 mm)
+[motion] INA-replanned-pre-grasp: reached (0.7 mm)
+[recovery-execution] INA postconditions: PASS
+[recovery-execution] replanned pre-grasp position error: 0.7 mm
+[recovery-execution] canister displacement: 0.0 mm
+[recovery-execution] kinematic attachment: inactive
+[recovery-backend] backend=simulation
+[recovery-backend] success=True
+[recovery-backend] message=All recovery actions completed in the simulation backend.
+[recovery-backend] executed actions: replan_pre_grasp

@@ -1,0 +1,85 @@
+{
+  "experiment": "confidence_vs_consensus",
+  "synthetic_verifier_inputs": [
+    {
+      "verifier": "kinematics_verifier",
+      "direction": "left",
+      "confidence": 0.95,
+      "risk": 0.2
+    },
+    {
+      "verifier": "task_logic_verifier",
+      "direction": "right",
+      "confidence": 0.9,
+      "risk": 0.2
+    },
+    {
+      "verifier": "object_state_verifier",
+      "direction": "right",
+      "confidence": 0.85,
+      "risk": 0.1
+    }
+  ],
+  "confidence_policy": {
+    "actions": [
+      {
+        "name": "move_robot",
+        "parameters": {
+          "direction": "left"
+        }
+      }
+    ],
+    "accepted_verifiers": [
+      "kinematics_verifier"
+    ],
+    "rejected_verifiers": {
+      "task_logic_verifier": "Conflicts with higher-priority suggestion(s): kinematics_verifier",
+      "object_state_verifier": "Conflicts with higher-priority suggestion(s): kinematics_verifier"
+    },
+    "metadata": {
+      "selection_policy": "confidence",
+      "attempt_count": 0,
+      "selected_verifier_count": 1,
+      "rejected_verifier_count": 2,
+      "confidence_score": 0.95,
+      "risk_score": 0.2,
+      "verifier_support": {
+        "kinematics_verifier": 1
+      }
+    }
+  },
+  "consensus_policy": {
+    "actions": [
+      {
+        "name": "move_robot",
+        "parameters": {
+          "direction": "right"
+        }
+      }
+    ],
+    "accepted_verifiers": [
+      "task_logic_verifier",
+      "object_state_verifier"
+    ],
+    "rejected_verifiers": {
+      "kinematics_verifier": "Conflicts with higher-priority suggestion(s): task_logic_verifier, object_state_verifier"
+    },
+    "metadata": {
+      "selection_policy": "consensus",
+      "attempt_count": 0,
+      "selected_verifier_count": 2,
+      "rejected_verifier_count": 1,
+      "confidence_score": 0.875,
+      "risk_score": 0.2,
+      "verifier_support": {
+        "task_logic_verifier": 2,
+        "object_state_verifier": 2
+      }
+    }
+  },
+  "expected": {
+    "confidence_direction": "left",
+    "consensus_direction": "right",
+    "reason": "Two verifiers support right; one verifier with the highest individual confidence supports left. All proposals pass the risk assessment."
+  }
+}

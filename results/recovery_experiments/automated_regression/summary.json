@@ -1,0 +1,101 @@
+{
+  "created_at_utc": "2026-11-07T09:40:59.601156+00:00",
+  "project_root": "/home/coco/rec_ws/naivphys4rp",
+  "execution_mode": "simulation",
+  "headless": true,
+  "hardware_commands_sent": false,
+  "total_runs": 8,
+  "passed": 8,
+  "failed": 0,
+  "all_passed": true,
+  "results": [
+    {
+      "scenario": "baseline",
+      "failure_stage": "",
+      "expected_strategy": "",
+      "expected_action": "",
+      "passed": true,
+      "return_code": 0,
+      "elapsed_seconds": 2.1434,
+      "missing_checks": "",
+      "log_file": "results/recovery_experiments/automated_regression/baseline.log"
+    },
+    {
+      "scenario": "GOB_grasp",
+      "failure_stage": "grasp",
+      "expected_strategy": "GOB",
+      "expected_action": "return_to_pre_grasp",
+      "passed": true,
+      "return_code": 0,
+      "elapsed_seconds": 0.9986,
+      "missing_checks": "",
+      "log_file": "results/recovery_experiments/automated_regression/GOB_grasp.log"
+    },
+    {
+      "scenario": "GBB_transfer",
+      "failure_stage": "transfer",
+      "expected_strategy": "GBB",
+      "expected_action": "return_to_last_safe_waypoint",
+      "passed": true,
+      "return_code": 0,
+      "elapsed_seconds": 0.9678,
+      "missing_checks": "",
+      "log_file": "results/recovery_experiments/automated_regression/GBB_transfer.log"
+    },
+    {
+      "scenario": "INA_pre_grasp",
+      "failure_stage": "pre_grasp",
+      "expected_strategy": "INA",
+      "expected_action": "replan_pre_grasp",
+      "passed": true,
+      "return_code": 0,
+      "elapsed_seconds": 0.8809,
+      "missing_checks": "",
+      "log_file": "results/recovery_experiments/automated_regression/INA_pre_grasp.log"
+    },
+    {
+      "scenario": "ESS_lift",
+      "failure_stage": "lift",
+      "expected_strategy": "ESS",
+      "expected_action": "stop_robot",
+      "passed": true,
+      "return_code": 0,
+      "elapsed_seconds": 0.9826,
+      "missing_checks": "",
+      "log_file": "results/recovery_experiments/automated_regression/ESS_lift.log"
+    },
+    {
+      "scenario": "INA_insertion",
+      "failure_stage": "insertion",
+      "expected_strategy": "INA",
+      "expected_action": "replan_insertion",
+      "passed": true,
+      "return_code": 0,
+      "elapsed_seconds": 1.0066,
+      "missing_checks": "",
+      "log_file": "results/recovery_experiments/automated_regression/INA_insertion.log"
+    },
+    {
+      "scenario": "GOB_placement",
+      "failure_stage": "placement",
+      "expected_strategy": "GOB",
+      "expected_action": "return_to_placement_waypoint",
+      "passed": true,
+      "return_code": 0,
+      "elapsed_seconds": 1.0709,
+      "missing_checks": "",
+      "log_file": "results/recovery_experiments/automated_regression/GOB_placement.log"
+    },
+    {
+      "scenario": "INO_object_unavailable",
+      "failure_stage": "object_unavailable",
+      "expected_strategy": "INO",
+      "expected_action": "introduce_replacement_canister",
+      "passed": true,
+      "return_code": 0,
+      "elapsed_seconds": 2.0758,
+      "missing_checks": "",
+      "log_file": "results/recovery_experiments/automated_regression/INO_object_unavailable.log"
+    }
+  ]
+}

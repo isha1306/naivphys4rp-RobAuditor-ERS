@@ -1,0 +1,195 @@
+[
+  {
+    "case": "consensus",
+    "E1_single_verifier": {
+      "status": "VALIDATED",
+      "actions": [
+        "return_to_pre_grasp"
+      ],
+      "action_parameters": [
+        {}
+      ],
+      "accepted_verifiers": [
+        "kinematics"
+      ],
+      "rejected_verifiers": {},
+      "risk_score": 0.2,
+      "confidence_score": 0.94,
+      "message": "A recovery plan passed validation."
+    },
+    "E2_naive_merge": {
+      "action_count": 3,
+      "action_names": [
+        "return_to_pre_grasp",
+        "return_to_pre_grasp",
+        "return_to_pre_grasp"
+      ],
+      "conflict_pair_count": 0,
+      "conflict_pairs": [],
+      "risk_values": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "contains_over_threshold_risk": false
+    },
+    "E3_risk_aware_ensemble": {
+      "status": "VALIDATED",
+      "actions": [
+        "return_to_pre_grasp"
+      ],
+      "action_parameters": [
+        {}
+      ],
+      "accepted_verifiers": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_verifiers": {},
+      "risk_score": 0.2,
+      "confidence_score": 0.9033333333333333,
+      "message": "A recovery plan passed validation."
+    }
+  },
+  {
+    "case": "conflicting_actions",
+    "E1_single_verifier": {
+      "status": "VALIDATED",
+      "actions": [
+        "move_robot"
+      ],
+      "action_parameters": [
+        {
+          "direction": "left"
+        }
+      ],
+      "accepted_verifiers": [
+        "kinematics"
+      ],
+      "rejected_verifiers": {},
+      "risk_score": 0.2,
+      "confidence_score": 0.94,
+      "message": "A recovery plan passed validation."
+    },
+    "E2_naive_merge": {
+      "action_count": 3,
+      "action_names": [
+        "move_robot",
+        "move_robot",
+        "hold_position"
+      ],
+      "conflict_pair_count": 1,
+      "conflict_pairs": [
+        "kinematics<->task_logic"
+      ],
+      "risk_values": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "contains_over_threshold_risk": false
+    },
+    "E3_risk_aware_ensemble": {
+      "status": "VALIDATED",
+      "actions": [
+        "move_robot",
+        "hold_position"
+      ],
+      "action_parameters": [
+        {
+          "direction": "left"
+        },
+        {}
+      ],
+      "accepted_verifiers": [
+        "kinematics",
+        "object_state"
+      ],
+      "rejected_verifiers": {
+        "task_logic": "Conflicts with higher-priority suggestion(s): kinematics"
+      },
+      "risk_score": 0.2,
+      "confidence_score": 0.8799999999999999,
+      "message": "A recovery plan passed validation."
+    }
+  },
+  {
+    "case": "high_risk_vs_low_risk",
+    "E1_single_verifier": {
+      "status": "HUMAN_INTERVENTION",
+      "actions": [],
+      "action_parameters": [],
+      "accepted_verifiers": [],
+      "rejected_verifiers": {
+        "high_confidence": "Risk assessment: reject. Risk score 0.95 exceeds the allowed threshold 0.70."
+      },
+      "risk_score": 1.0,
+      "confidence_score": 0.0,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    "E2_naive_merge": {
+      "action_count": 2,
+      "action_names": [
+        "aggressive_recovery",
+        "conservative_recovery"
+      ],
+      "conflict_pair_count": 0,
+      "conflict_pairs": [],
+      "risk_values": [
+        0.95,
+        0.1
+      ],
+      "contains_over_threshold_risk": true
+    },
+    "E3_risk_aware_ensemble": {
+      "status": "VALIDATED",
+      "actions": [
+        "conservative_recovery"
+      ],
+      "action_parameters": [
+        {}
+      ],
+      "accepted_verifiers": [
+        "lower_confidence"
+      ],
+      "rejected_verifiers": {
+        "high_confidence": "Risk assessment: reject. Risk score 0.95 exceeds the allowed threshold 0.70."
+      },
+      "risk_score": 0.1,
+      "confidence_score": 0.72,
+      "message": "A recovery plan passed validation."
+    }
+  },
+  {
+    "case": "incomplete_recommendations",
+    "E1_single_verifier": {
+      "status": "HUMAN_INTERVENTION",
+      "actions": [],
+      "action_parameters": [],
+      "accepted_verifiers": [],
+      "rejected_verifiers": {},
+      "risk_score": null,
+      "confidence_score": null,
+      "message": "No recovery suggestions were provided."
+    },
+    "E2_naive_merge": {
+      "action_count": 0,
+      "action_names": [],
+      "conflict_pair_count": 0,
+      "conflict_pairs": [],
+      "risk_values": [],
+      "contains_over_threshold_risk": false
+    },
+    "E3_risk_aware_ensemble": {
+      "status": "HUMAN_INTERVENTION",
+      "actions": [],
+      "action_parameters": [],
+      "accepted_verifiers": [],
+      "rejected_verifiers": {},
+      "risk_score": null,
+      "confidence_score": null,
+      "message": "No recovery suggestions were provided."
+    }
+  }
+]
