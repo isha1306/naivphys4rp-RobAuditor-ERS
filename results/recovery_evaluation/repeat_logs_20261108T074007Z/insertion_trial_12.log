@@ -1,0 +1,75 @@
+[recovery-config] policy=confidence, candidate_count=1, temperature=0.15, seed=None
+[scene] retained: Tracy robot + table/floor + canister1 + replacement canister + Pump1/Pump2
+[scene] removed unrelated bodies: canister2, BottleLarge, Needle, NeedleCap, BottleMedium, BottleSmall, expected_inserted_canister1, expected_inserted_canister2, needle_cap, needle_tool
+[scene] tray collision boxes preserved (Pump1/Pump2)
+[warning] Could not save perception image canister_tray_perception.png: No module named 'PIL'
+[perception] canister centre: [0.4994 0.499  0.9429] m
+[perception] selected opening: Pump1
+
+[plan] selected left arm
+[motion] pre-pick: reached (0.6 mm)
+[motion] grasp: reached (1.3 mm)
+[grasp] activated kinematic simulator attachment for canister1 from measured grasp pose
+[motion] lift: reached (0.6 mm)
+[verification] canister lifted by 0.148 m
+[transfer] staged loaded path: 18 segments, distance=0.775 m, step<=0.045 m
+[motion] loaded-transfer-1/18: reached (2.3 mm)
+[motion] loaded-transfer-2/18: reached (2.3 mm)
+[motion] loaded-transfer-3/18: reached (2.3 mm)
+[motion] loaded-transfer-4/18: reached (2.2 mm)
+[motion] loaded-transfer-5/18: reached (2.1 mm)
+[motion] loaded-transfer-6/18: reached (2.0 mm)
+[motion] loaded-transfer-7/18: reached (2.0 mm)
+[motion] loaded-transfer-8/18: reached (2.0 mm)
+[motion] loaded-transfer-9/18: reached (2.0 mm)
+[motion] loaded-transfer-10/18: reached (1.9 mm)
+[motion] loaded-transfer-11/18: reached (1.9 mm)
+[motion] loaded-transfer-12/18: reached (1.9 mm)
+[motion] loaded-transfer-13/18: reached (1.8 mm)
+[motion] loaded-transfer-14/18: reached (1.8 mm)
+[motion] loaded-transfer-15/18: reached (1.7 mm)
+[motion] loaded-transfer-16/18: reached (1.6 mm)
+[motion] loaded-transfer-17/18: reached (1.6 mm)
+[motion] loaded-transfer-18/18: reached (1.6 mm)
+[failure-injection] Injecting failure at stage: insertion
+\n[failure] Simulation interrupted: Injected failure at stage 'insertion' (failure_id=injected_insertion)
+
+[recovery] injected failure: injected_insertion
+[recovery] verifier results: 3
+[recovery] evidence origin: live_mujoco_state
+[recovery] verifier: kinematics_verifier Ds: PASS Cf: 0.93 Ed: joint_state_and_motion checks passed from live MuJoCo state. Er: not_proposed
+[recovery] quadruplet: {'verifier_id': 'kinematics_verifier', 'Ds': {'decision': True, 'label': 'PASS'}, 'Cf': {'confidence': 0.93}, 'Ed': {'text': 'joint_state_and_motion checks passed from live MuJoCo state.', 'evidence': {'canister_available': True, 'canister_position_m': [0.8863986849168384, -0.17156028311494875, 1.091100702449033], 'canister_position_finite': True, 'joint_positions_finite': True, 'joint_velocities_finite': True, 'max_abs_joint_velocity_rad_s': 9.311030926672439, 'kinematic_emergency_speed_limit_rad_s': 12.0, 'contact_count': 2, 'canister_gripper_contact_count': 2, 'canister_environment_contact_count': 0, 'failure_stage': 'insertion', 'measurement_source': 'live_mujoco_state', 'focus': 'joint_state_and_motion'}, 'visual_evidence': [], 'metadata': {'format': 'structured_state', 'evidence_origin': 'live_mujoco_state', 'visual_observation_available': False}}, 'Er': None}
+[recovery] verifier: task_logic_verifier Ds: FAIL Cf: 0.8200000000000001 Ed: task_checkpoint_contract checks failed from live MuJoCo state. Er: INA
+[recovery] quadruplet: {'verifier_id': 'task_logic_verifier', 'Ds': {'decision': False, 'label': 'FAIL'}, 'Cf': {'confidence': 0.8200000000000001}, 'Ed': {'text': 'task_checkpoint_contract checks failed from live MuJoCo state.', 'evidence': {'canister_available': True, 'canister_position_m': [0.8863986849168384, -0.17156028311494875, 1.091100702449033], 'canister_position_finite': True, 'joint_positions_finite': True, 'joint_velocities_finite': True, 'max_abs_joint_velocity_rad_s': 9.311030926672439, 'kinematic_emergency_speed_limit_rad_s': 12.0, 'contact_count': 2, 'canister_gripper_contact_count': 2, 'canister_environment_contact_count': 0, 'failure_stage': 'insertion', 'measurement_source': 'live_mujoco_state', 'focus': 'task_checkpoint_contract'}, 'visual_evidence': [], 'metadata': {'format': 'structured_state', 'evidence_origin': 'live_mujoco_state', 'visual_observation_available': False}}, 'Er': {'strategy': 'INA', 'actions': [{'name': 'replan_insertion', 'parameters': {}, 'description': 'The expected task transition was not completed; restore the stage checkpoint.', 'estimated_risk': 0.2}], 'failure_type': 'insertion_failure'}}
+[recovery] verifier: object_state_verifier Ds: PASS Cf: 0.91 Ed: canister_pose_and_contacts checks passed from live MuJoCo state. Er: not_proposed
+[recovery] quadruplet: {'verifier_id': 'object_state_verifier', 'Ds': {'decision': True, 'label': 'PASS'}, 'Cf': {'confidence': 0.91}, 'Ed': {'text': 'canister_pose_and_contacts checks passed from live MuJoCo state.', 'evidence': {'canister_available': True, 'canister_position_m': [0.8863986849168384, -0.17156028311494875, 1.091100702449033], 'canister_position_finite': True, 'joint_positions_finite': True, 'joint_velocities_finite': True, 'max_abs_joint_velocity_rad_s': 9.311030926672439, 'kinematic_emergency_speed_limit_rad_s': 12.0, 'contact_count': 2, 'canister_gripper_contact_count': 2, 'canister_environment_contact_count': 0, 'failure_stage': 'insertion', 'measurement_source': 'live_mujoco_state', 'focus': 'canister_pose_and_contacts'}, 'visual_evidence': [], 'metadata': {'format': 'structured_state', 'evidence_origin': 'live_mujoco_state', 'visual_observation_available': False}}, 'Er': None}
+[recovery] test strategy: INA
+[recovery] manager status: VALIDATED
+[recovery] message: A recovery plan passed validation.
+[recovery] validated candidate plans: 1
+[recovery] candidate selection probabilities:
+  - recovery-95664f34: 1.0000
+[recovery] proposed actions:
+  - replan_insertion
+[recovery] plan status: VALIDATED
+[recovery] accepted verifier suggestions: 1
+[recovery] actions were NOT executed.
+[recovery-execution] attempting validated INA insertion recovery
+[recovery-execution] INA replanning insertion with raised lateral-clearance approach
+[motion] INA-insertion-raised-clearance: reached (1.0 mm)
+[motion] INA-insertion-lateral-waypoint: reached (1.3 mm)
+[motion] INA-insertion-centered-approach: reached (1.6 mm)
+[motion] INA-replanned-insertion: reached (5.8 mm)
+[recovery-execution] INA insertion postconditions: PASS
+[recovery-execution] insertion tool-position error: 5.8 mm
+[recovery-execution] canister motion during approach: 145.0 mm
+[recovery-execution] mount-relative attachment error: 0.00 mm
+[recovery-execution] canister attachment: active
+[recovery-execution] INA insertion recovery: SUCCEEDED (deterministic alternate approach; not collision-checked planning)
+[recovery-backend] backend=simulation
+[recovery-backend] status=SUCCEEDED
+[recovery-backend] attempts=1
+[recovery-backend] postconditions_verified=True
+[recovery-backend] message=Recovery execution and postconditions were verified.
+[recovery-backend] executed actions: replan_insertion
+

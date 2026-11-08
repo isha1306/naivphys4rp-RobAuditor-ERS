@@ -1,0 +1,5 @@
+stage,process_returncode,process_elapsed_s,strategy,manager_status,backend_status,attempts,postconditions_verified,executed_actions,waypoint_error_mm,object_displacement_mm,attachment_error_mm,contact_count,environment_contact_count,gripper_contact_count,run_success,failure_reason
+grasp,0,1.770775,GOB,VALIDATED,SUCCEEDED,1,True,return_to_pre_grasp,0.6,1.7,,6,4,2,True,
+transfer,0,1.769833,GBB,VALIDATED,SUCCEEDED,1,True,return_to_last_safe_waypoint,1.9,42.2,0.0,2,0,2,True,
+insertion,0,1.936407,INA,VALIDATED,SUCCEEDED,1,True,replan_insertion,5.8,145.0,0.0,2,0,2,True,
+placement,0,1.917016,GOB,VALIDATED,SUCCEEDED,1,True,return_to_placement_waypoint,4.2,149.5,0.0,224,222,2,True,

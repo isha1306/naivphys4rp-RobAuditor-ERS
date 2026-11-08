@@ -416,6 +416,8 @@ class RecoveryManager:
             max_attempts=context.max_attempts,
             metadata={
                 "requires_safe_state_confirmation": True,
+                "ess_priority": True,
+                "ess_trigger_reason": "dedicated_safe_state_recovery",
             },
         )
 

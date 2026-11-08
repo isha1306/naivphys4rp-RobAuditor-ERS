@@ -1,0 +1,829 @@
+{
+  "created_utc": "2026-11-08T08:43:22.031676+00:00",
+  "base_seed": 20261108,
+  "repetitions_per_scenario_policy": 1,
+  "summary": {
+    "trials": 24,
+    "invariant_passes": 22,
+    "invariant_failures": 2,
+    "overall_invariant_pass_rate": 0.916667,
+    "by_policy": {
+      "single_verifier": {
+        "trials": 6,
+        "invariant_passes": 5,
+        "invariant_failures": 1,
+        "pass_rate": 0.833333
+      },
+      "confidence": {
+        "trials": 6,
+        "invariant_passes": 5,
+        "invariant_failures": 1,
+        "pass_rate": 0.833333
+      },
+      "consensus": {
+        "trials": 6,
+        "invariant_passes": 6,
+        "invariant_failures": 0,
+        "pass_rate": 1.0
+      },
+      "probabilistic": {
+        "trials": 6,
+        "invariant_passes": 6,
+        "invariant_failures": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "by_scenario_and_policy": {
+      "agreement": {
+        "single_verifier": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "confidence": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "consensus": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "probabilistic": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        }
+      },
+      "majority_conflict": {
+        "single_verifier": {
+          "trials": 1,
+          "invariant_passes": 0,
+          "invariant_failures": 1,
+          "pass_rate": 0.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "confidence": {
+          "trials": 1,
+          "invariant_passes": 0,
+          "invariant_failures": 1,
+          "pass_rate": 0.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "consensus": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "probabilistic": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        }
+      },
+      "high_risk_vs_safe": {
+        "single_verifier": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "HUMAN_INTERVENTION": 1
+          }
+        },
+        "confidence": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "consensus": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "probabilistic": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        }
+      },
+      "incomplete": {
+        "single_verifier": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "HUMAN_INTERVENTION": 1
+          }
+        },
+        "confidence": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "HUMAN_INTERVENTION": 1
+          }
+        },
+        "consensus": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "HUMAN_INTERVENTION": 1
+          }
+        },
+        "probabilistic": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "HUMAN_INTERVENTION": 1
+          }
+        }
+      },
+      "uncertain": {
+        "single_verifier": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "confidence": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "consensus": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "probabilistic": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        }
+      },
+      "unsafe_ess": {
+        "single_verifier": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "confidence": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "consensus": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        },
+        "probabilistic": {
+          "trials": 1,
+          "invariant_passes": 1,
+          "invariant_failures": 0,
+          "pass_rate": 1.0,
+          "status_counts": {
+            "VALIDATED": 1
+          }
+        }
+      }
+    },
+    "scope": "Model-level controlled verifier-disagreement experiment. Synthetic verifier outputs; no live MuJoCo motion, physical sensors, or hardware safety validation."
+  },
+  "trials": [
+    {
+      "scenario": "agreement",
+      "policy": "single_verifier",
+      "seed": 20261108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "risk": 0.24742136348394317
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "selection_probabilities": {
+        "recovery-7739ab3b": 1.0
+      },
+      "expected_property": "validated_safe_plan",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "agreement",
+      "policy": "confidence",
+      "seed": 20271108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "risk": 0.1132115672368713
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "selection_probabilities": {
+        "recovery-22253629": 1.0
+      },
+      "expected_property": "validated_safe_plan",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "agreement",
+      "policy": "consensus",
+      "seed": 20281108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "risk": 0.0784813990671502
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "selection_probabilities": {
+        "recovery-e62af208": 1.0
+      },
+      "expected_property": "validated_safe_plan",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "agreement",
+      "policy": "probabilistic",
+      "seed": 20291108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "risk": 0.14262229579778912
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "selection_probabilities": {
+        "candidate-fb883f6c34": 1.0
+      },
+      "expected_property": "validated_safe_plan",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "majority_conflict",
+      "policy": "single_verifier",
+      "seed": 20361108,
+      "status": "VALIDATED",
+      "invariant_pass": false,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.2121531109838301
+        }
+      ],
+      "directions": [
+        "left"
+      ],
+      "accepted_suggestions": [
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "selection_probabilities": {
+        "recovery-9efac838": 1.0
+      },
+      "expected_property": "right_majority_or_safe_escalation",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "majority_conflict",
+      "policy": "confidence",
+      "seed": 20371108,
+      "status": "VALIDATED",
+      "invariant_pass": false,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.1589388888339989
+        }
+      ],
+      "directions": [
+        "left"
+      ],
+      "accepted_suggestions": [
+        "kinematics"
+      ],
+      "rejected_suggestions": {
+        "task_logic": "Conflicts with higher-priority suggestion(s): kinematics",
+        "object_state": "Conflicts with higher-priority suggestion(s): kinematics"
+      },
+      "selection_probabilities": {
+        "recovery-ad579679": 1.0
+      },
+      "expected_property": "right_majority_or_safe_escalation",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "majority_conflict",
+      "policy": "consensus",
+      "seed": 20381108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.13335359796991847
+        }
+      ],
+      "directions": [
+        "right"
+      ],
+      "accepted_suggestions": [
+        "task_logic"
+      ],
+      "rejected_suggestions": {
+        "object_state": "Conflicts with higher-priority suggestion(s): task_logic",
+        "kinematics": "Conflicts with higher-priority suggestion(s): task_logic"
+      },
+      "selection_probabilities": {
+        "recovery-be95b1e3": 1.0
+      },
+      "expected_property": "right_majority_or_safe_escalation",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "majority_conflict",
+      "policy": "probabilistic",
+      "seed": 20391108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.2340053325532871
+        }
+      ],
+      "directions": [
+        "right"
+      ],
+      "accepted_suggestions": [
+        "task_logic"
+      ],
+      "rejected_suggestions": {
+        "kinematics": "Conflicts with higher-priority suggestion(s): task_logic",
+        "object_state": "Conflicts with higher-priority suggestion(s): task_logic"
+      },
+      "selection_probabilities": {
+        "candidate-679944580e": 0.6318124177361016,
+        "candidate-d6003fe64a": 0.36818758226389836
+      },
+      "expected_property": "right_majority_or_safe_escalation",
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "scenario": "high_risk_vs_safe",
+      "policy": "single_verifier",
+      "seed": 20461108,
+      "status": "HUMAN_INTERVENTION",
+      "invariant_pass": true,
+      "actions": [],
+      "directions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "kinematics": "Risk assessment: reject. Risk score 0.96 exceeds the allowed threshold 0.70."
+      },
+      "selection_probabilities": {},
+      "expected_property": "no_action_above_risk_threshold",
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "scenario": "high_risk_vs_safe",
+      "policy": "confidence",
+      "seed": 20471108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "risk": 0.12
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "kinematics": "Risk assessment: reject. Risk score 0.96 exceeds the allowed threshold 0.70."
+      },
+      "selection_probabilities": {
+        "recovery-b703b028": 1.0
+      },
+      "expected_property": "no_action_above_risk_threshold",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "high_risk_vs_safe",
+      "policy": "consensus",
+      "seed": 20481108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "risk": 0.12
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "kinematics": "Risk assessment: reject. Risk score 0.96 exceeds the allowed threshold 0.70."
+      },
+      "selection_probabilities": {
+        "recovery-d69dd61e": 1.0
+      },
+      "expected_property": "no_action_above_risk_threshold",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "high_risk_vs_safe",
+      "policy": "probabilistic",
+      "seed": 20491108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "risk": 0.12
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "kinematics": "Risk assessment: reject. Risk score 0.96 exceeds the allowed threshold 0.70."
+      },
+      "selection_probabilities": {
+        "candidate-fb883f6c34": 1.0
+      },
+      "expected_property": "no_action_above_risk_threshold",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "incomplete",
+      "policy": "single_verifier",
+      "seed": 20561108,
+      "status": "HUMAN_INTERVENTION",
+      "invariant_pass": true,
+      "actions": [],
+      "directions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "selection_probabilities": {},
+      "expected_property": "human_intervention",
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "scenario": "incomplete",
+      "policy": "confidence",
+      "seed": 20571108,
+      "status": "HUMAN_INTERVENTION",
+      "invariant_pass": true,
+      "actions": [],
+      "directions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "selection_probabilities": {},
+      "expected_property": "human_intervention",
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "scenario": "incomplete",
+      "policy": "consensus",
+      "seed": 20581108,
+      "status": "HUMAN_INTERVENTION",
+      "invariant_pass": true,
+      "actions": [],
+      "directions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "selection_probabilities": {},
+      "expected_property": "human_intervention",
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "scenario": "incomplete",
+      "policy": "probabilistic",
+      "seed": 20591108,
+      "status": "HUMAN_INTERVENTION",
+      "invariant_pass": true,
+      "actions": [],
+      "directions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "selection_probabilities": {},
+      "expected_property": "human_intervention",
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "scenario": "uncertain",
+      "policy": "single_verifier",
+      "seed": 20661108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "risk": 0.13568812954229362
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "selection_probabilities": {
+        "recovery-d6f159f2": 1.0
+      },
+      "expected_property": "validated_or_human_intervention_without_unsafe_action",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "uncertain",
+      "policy": "confidence",
+      "seed": 20671108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "risk": 0.07355559175242406
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "selection_probabilities": {
+        "recovery-f5b312c0": 1.0
+      },
+      "expected_property": "validated_or_human_intervention_without_unsafe_action",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "uncertain",
+      "policy": "consensus",
+      "seed": 20681108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "risk": 0.10796858888727877
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "selection_probabilities": {
+        "recovery-fd441eda": 1.0
+      },
+      "expected_property": "validated_or_human_intervention_without_unsafe_action",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "uncertain",
+      "policy": "probabilistic",
+      "seed": 20691108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "risk": 0.15915096813512122
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "selection_probabilities": {
+        "candidate-fb883f6c34": 1.0
+      },
+      "expected_property": "validated_or_human_intervention_without_unsafe_action",
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "unsafe_ess",
+      "policy": "single_verifier",
+      "seed": 20761108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "risk": 0.0
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "selection_probabilities": {},
+      "expected_property": "ess_stop_only",
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "scenario": "unsafe_ess",
+      "policy": "confidence",
+      "seed": 20771108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "risk": 0.0
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "selection_probabilities": {},
+      "expected_property": "ess_stop_only",
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "scenario": "unsafe_ess",
+      "policy": "consensus",
+      "seed": 20781108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "risk": 0.0
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "selection_probabilities": {},
+      "expected_property": "ess_stop_only",
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "scenario": "unsafe_ess",
+      "policy": "probabilistic",
+      "seed": 20791108,
+      "status": "VALIDATED",
+      "invariant_pass": true,
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "risk": 0.0
+        }
+      ],
+      "directions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "selection_probabilities": {},
+      "expected_property": "ess_stop_only",
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    }
+  ]
+}

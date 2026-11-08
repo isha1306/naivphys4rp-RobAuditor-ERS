@@ -1,0 +1,65 @@
+stage,seed,return_code,elapsed_seconds,canister_xy_bound_m,canister_yaw_bound_deg,joint_position_bound_deg,joint_velocity_bound_rad_s,manager_status,backend_status,backend_success,postconditions_verified,strategy,waypoint_error_mm,object_displacement_mm,contact_count,trial_pass,error
+grasp,20261109,1,0.939959,0.001735,1.597,0.1738,0.0156,,,,,,,,,False,"[recovery-config] policy=confidence, candidate_count=1, temperature=0.15, seed=None
+[scene] retained: Tracy robot + table/floor + canister1 + replacement canister + Pump1/Pump2
+[scene] removed unrelated bodies: canister2, BottleLarge, Needle, NeedleCap, BottleMedium, BottleSmall, expected_inserted_canister1, expected_inserted_canister2, needle_cap, needle_tool
+[scene] tray collision boxes preserved (Pump1/Pump2)
+
+Traceback (most recent call last):
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 2418, in <module>
+    main()
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 2140, in main
+    perturbation = apply_initial_state_perturbation(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 1970, in apply_initial_state_perturbation
+    arm_qpos_ids, arm_dof_ids = arm_joint_indices(model, ARM_TO_USE)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+"
+transfer,20361109,1,0.905382,0.003307,2.079,0.1979,0.0287,,,,,,,,,False,"[recovery-config] policy=confidence, candidate_count=1, temperature=0.15, seed=None
+[scene] retained: Tracy robot + table/floor + canister1 + replacement canister + Pump1/Pump2
+[scene] removed unrelated bodies: canister2, BottleLarge, Needle, NeedleCap, BottleMedium, BottleSmall, expected_inserted_canister1, expected_inserted_canister2, needle_cap, needle_tool
+[scene] tray collision boxes preserved (Pump1/Pump2)
+
+Traceback (most recent call last):
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 2418, in <module>
+    main()
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 2140, in main
+    perturbation = apply_initial_state_perturbation(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 1970, in apply_initial_state_perturbation
+    arm_qpos_ids, arm_dof_ids = arm_joint_indices(model, ARM_TO_USE)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+"
+insertion,20461109,1,0.784269,0.002628,2.6338,0.1892,0.00824,,,,,,,,,False,"[recovery-config] policy=confidence, candidate_count=1, temperature=0.15, seed=None
+[scene] retained: Tracy robot + table/floor + canister1 + replacement canister + Pump1/Pump2
+[scene] removed unrelated bodies: canister2, BottleLarge, Needle, NeedleCap, BottleMedium, BottleSmall, expected_inserted_canister1, expected_inserted_canister2, needle_cap, needle_tool
+[scene] tray collision boxes preserved (Pump1/Pump2)
+
+Traceback (most recent call last):
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 2418, in <module>
+    main()
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 2140, in main
+    perturbation = apply_initial_state_perturbation(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 1970, in apply_initial_state_perturbation
+    arm_qpos_ids, arm_dof_ids = arm_joint_indices(model, ARM_TO_USE)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+"
+placement,20561109,1,0.91888,0.002429,0.3305,0.0789,0.00677,,,,,,,,,False,"[recovery-config] policy=confidence, candidate_count=1, temperature=0.15, seed=None
+[scene] retained: Tracy robot + table/floor + canister1 + replacement canister + Pump1/Pump2
+[scene] removed unrelated bodies: canister2, BottleLarge, Needle, NeedleCap, BottleMedium, BottleSmall, expected_inserted_canister1, expected_inserted_canister2, needle_cap, needle_tool
+[scene] tray collision boxes preserved (Pump1/Pump2)
+
+Traceback (most recent call last):
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 2418, in <module>
+    main()
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 2140, in main
+    perturbation = apply_initial_state_perturbation(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/home/coco/rec_ws/naivphys4rp/python/src/robauditor/src/canister_pick_and_place.py"", line 1970, in apply_initial_state_perturbation
+    arm_qpos_ids, arm_dof_ids = arm_joint_indices(model, ARM_TO_USE)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+"

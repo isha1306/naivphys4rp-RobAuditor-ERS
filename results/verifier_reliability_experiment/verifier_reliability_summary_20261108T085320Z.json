@@ -1,0 +1,1877 @@
+{
+  "created_utc": "2026-11-08T08:53:20.844917+00:00",
+  "base_seed": 20261109,
+  "repetitions_per_scenario_policy": 1,
+  "summary": {
+    "trials": 40,
+    "by_policy": {
+      "single_verifier": {
+        "trials": 8,
+        "correct_or_safe_abstention": 4,
+        "decision_rate": 0.5,
+        "safety_invariant_passes": 8,
+        "safety_pass_rate": 1.0,
+        "human_intervention_count": 0
+      },
+      "confidence": {
+        "trials": 8,
+        "correct_or_safe_abstention": 4,
+        "decision_rate": 0.5,
+        "safety_invariant_passes": 8,
+        "safety_pass_rate": 1.0,
+        "human_intervention_count": 0
+      },
+      "equal_consensus": {
+        "trials": 8,
+        "correct_or_safe_abstention": 6,
+        "decision_rate": 0.75,
+        "safety_invariant_passes": 8,
+        "safety_pass_rate": 1.0,
+        "human_intervention_count": 2
+      },
+      "confidence_weighted_consensus": {
+        "trials": 8,
+        "correct_or_safe_abstention": 7,
+        "decision_rate": 0.875,
+        "safety_invariant_passes": 8,
+        "safety_pass_rate": 1.0,
+        "human_intervention_count": 2
+      },
+      "reliability_weighted_probabilistic": {
+        "trials": 8,
+        "correct_or_safe_abstention": 8,
+        "decision_rate": 1.0,
+        "safety_invariant_passes": 8,
+        "safety_pass_rate": 1.0,
+        "human_intervention_count": 3
+      }
+    },
+    "by_scenario_and_policy": {
+      "reliable_majority": {
+        "single_verifier": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "equal_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence_weighted_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "reliability_weighted_probabilistic": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        }
+      },
+      "misleading_majority": {
+        "single_verifier": {
+          "trials": 1,
+          "correct_or_safe_abstention": 0,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence": {
+          "trials": 1,
+          "correct_or_safe_abstention": 0,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "equal_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 0,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence_weighted_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "reliability_weighted_probabilistic": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        }
+      },
+      "one_unreliable_verifier": {
+        "single_verifier": {
+          "trials": 1,
+          "correct_or_safe_abstention": 0,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence": {
+          "trials": 1,
+          "correct_or_safe_abstention": 0,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "equal_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence_weighted_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "reliability_weighted_probabilistic": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        }
+      },
+      "unequal_reliability": {
+        "single_verifier": {
+          "trials": 1,
+          "correct_or_safe_abstention": 0,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence": {
+          "trials": 1,
+          "correct_or_safe_abstention": 0,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "equal_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 0,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence_weighted_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 0,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "reliability_weighted_probabilistic": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 1
+        }
+      },
+      "verifier_abstention": {
+        "single_verifier": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "equal_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence_weighted_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "reliability_weighted_probabilistic": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        }
+      },
+      "confidence_manipulation": {
+        "single_verifier": {
+          "trials": 1,
+          "correct_or_safe_abstention": 0,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence": {
+          "trials": 1,
+          "correct_or_safe_abstention": 0,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "equal_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence_weighted_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "reliability_weighted_probabilistic": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        }
+      },
+      "split_decision": {
+        "single_verifier": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "equal_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 1
+        },
+        "confidence_weighted_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 1
+        },
+        "reliability_weighted_probabilistic": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 1
+        }
+      },
+      "multiple_safe_alternatives": {
+        "single_verifier": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "confidence": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 0
+        },
+        "equal_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 1
+        },
+        "confidence_weighted_consensus": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 1
+        },
+        "reliability_weighted_probabilistic": {
+          "trials": 1,
+          "correct_or_safe_abstention": 1,
+          "safety_invariant_passes": 1,
+          "human_intervention_count": 1
+        }
+      }
+    },
+    "scope": "Synthetic model-level verifier reliability experiment. Reliability weights are supplied ground-truth experimental inputs, not learned estimates. No live robot motion, physical sensing, or hardware safety validation."
+  },
+  "trials": [
+    {
+      "scenario": "reliable_majority",
+      "policy": "single_verifier",
+      "seed": 20261109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-6860d4b9": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "reliable_majority",
+      "policy": "confidence",
+      "seed": 20271109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-2d940e1e": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "reliable_majority",
+      "policy": "equal_consensus",
+      "seed": 20281109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 3.0,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 2.0,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 1.0
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "task_logic"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-7e57bf38": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "reliable_majority",
+      "policy": "confidence_weighted_consensus",
+      "seed": 20291109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_times_confidence",
+        "total_weight": 2.206,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.55,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.656
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "task_logic"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-90f054bb": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "reliable_majority",
+      "policy": "reliability_weighted_probabilistic",
+      "seed": 20301109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 2.55,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.75,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.8
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "task_logic"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "candidate-d6003fe64a": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "misleading_majority",
+      "policy": "single_verifier",
+      "seed": 20361109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": false,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "left"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.2,
+        "object_state": 0.2
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-6e9b6118": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "misleading_majority",
+      "policy": "confidence",
+      "seed": 20371109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": false,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "left"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.2,
+        "object_state": 0.2
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-082e5773": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "misleading_majority",
+      "policy": "equal_consensus",
+      "seed": 20381109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": false,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "left"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.2,
+        "object_state": 0.2
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 3.0,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.0,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 2.0
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "task_logic",
+          "object_state"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-98a03988": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "misleading_majority",
+      "policy": "confidence_weighted_consensus",
+      "seed": 20391109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.2,
+        "object_state": 0.2
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_times_confidence",
+        "total_weight": 1.184,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 0.81,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.374
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-6e03d57e": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "misleading_majority",
+      "policy": "reliability_weighted_probabilistic",
+      "seed": 20401109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.2,
+        "object_state": 0.2
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 1.3,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 0.9,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.4
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "candidate-d6003fe64a": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "one_unreliable_verifier",
+      "policy": "single_verifier",
+      "seed": 20461109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": false,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "left"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.9,
+        "object_state": 0.15
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-92f38e91": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "one_unreliable_verifier",
+      "policy": "confidence",
+      "seed": 20471109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": false,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "left"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.9,
+        "object_state": 0.15
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-f6df5126": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "one_unreliable_verifier",
+      "policy": "equal_consensus",
+      "seed": 20481109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.9,
+        "object_state": 0.15
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 3.0,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 2.0,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 1.0
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "task_logic"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-30fce445": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "one_unreliable_verifier",
+      "policy": "confidence_weighted_consensus",
+      "seed": 20491109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.9,
+        "object_state": 0.15
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_times_confidence",
+        "total_weight": 1.6965,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.548,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.1485
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "task_logic"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-b75a6798": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "one_unreliable_verifier",
+      "policy": "reliability_weighted_probabilistic",
+      "seed": 20501109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.9,
+        "object_state": 0.15
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 1.95,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.8,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.15
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "task_logic"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "candidate-d6003fe64a": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "unequal_reliability",
+      "policy": "single_verifier",
+      "seed": 20561109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": false,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "left"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.95,
+        "task_logic": 0.65,
+        "object_state": 0.3
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-f9d1e452": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "unequal_reliability",
+      "policy": "confidence",
+      "seed": 20571109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": false,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "left"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.95,
+        "task_logic": 0.65,
+        "object_state": 0.3
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-4871f8ed": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "unequal_reliability",
+      "policy": "equal_consensus",
+      "seed": 20581109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": false,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "left"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.95,
+        "task_logic": 0.65,
+        "object_state": 0.3
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 3.0,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.0,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 2.0
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "task_logic",
+          "object_state"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-f8a7cbb6": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "unequal_reliability",
+      "policy": "confidence_weighted_consensus",
+      "seed": 20591109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": false,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "left"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.95,
+        "task_logic": 0.65,
+        "object_state": 0.3
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_times_confidence",
+        "total_weight": 1.6305,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 0.7125,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.918
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "task_logic",
+          "object_state"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-1c8f0ced": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "unequal_reliability",
+      "policy": "reliability_weighted_probabilistic",
+      "seed": 20601109,
+      "status": "HUMAN_INTERVENTION",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [],
+      "selected_directions": [],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.95,
+        "task_logic": 0.65,
+        "object_state": 0.3
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 1.9,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 0.95,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.95
+        },
+        "eligible_signatures": [],
+        "retained_verifiers": [],
+        "no_weighted_majority": true
+      },
+      "selection_probabilities": {},
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "scenario": "verifier_abstention",
+      "policy": "single_verifier",
+      "seed": 20661109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.8,
+        "object_state": 0.7
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-94846771": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "verifier_abstention",
+      "policy": "confidence",
+      "seed": 20671109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.8,
+        "object_state": 0.7
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-0d867155": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "verifier_abstention",
+      "policy": "equal_consensus",
+      "seed": 20681109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.8,
+        "object_state": 0.7
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 3.0,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 2.0
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "object_state"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-aaa2dbc4": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "verifier_abstention",
+      "policy": "confidence_weighted_consensus",
+      "seed": 20691109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.8,
+        "object_state": 0.7
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_times_confidence",
+        "total_weight": 1.832,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.352
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "object_state"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-e6728293": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "verifier_abstention",
+      "policy": "reliability_weighted_probabilistic",
+      "seed": 20701109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.8,
+        "object_state": 0.7
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 2.4,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.6
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "object_state"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "candidate-d6003fe64a": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "confidence_manipulation",
+      "policy": "single_verifier",
+      "seed": 20761109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": false,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "left"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.95,
+        "task_logic": 0.2,
+        "object_state": 0.85
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-74fbb6b0": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "confidence_manipulation",
+      "policy": "confidence",
+      "seed": 20771109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": false,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "left"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.95,
+        "task_logic": 0.2,
+        "object_state": 0.85
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-505703b6": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "confidence_manipulation",
+      "policy": "equal_consensus",
+      "seed": 20781109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.95,
+        "task_logic": 0.2,
+        "object_state": 0.85
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 3.0,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 2.0,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 1.0
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "object_state"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-9ab04509": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "confidence_manipulation",
+      "policy": "confidence_weighted_consensus",
+      "seed": 20791109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.95,
+        "task_logic": 0.2,
+        "object_state": 0.85
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_times_confidence",
+        "total_weight": 1.5468,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.347,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.1998
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "object_state"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "recovery-cffe0e9d": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "confidence_manipulation",
+      "policy": "reliability_weighted_probabilistic",
+      "seed": 20801109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.95,
+        "task_logic": 0.2,
+        "object_state": 0.85
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 2.0,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.8,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.2
+        },
+        "eligible_signatures": [
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]"
+        ],
+        "retained_verifiers": [
+          "kinematics",
+          "object_state"
+        ],
+        "no_weighted_majority": false
+      },
+      "selection_probabilities": {
+        "candidate-d6003fe64a": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "split_decision",
+      "policy": "single_verifier",
+      "seed": 20861109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "left",
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-30126259": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "split_decision",
+      "policy": "confidence",
+      "seed": 20871109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "left",
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-d5240f1e": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "split_decision",
+      "policy": "equal_consensus",
+      "seed": 20881109,
+      "status": "HUMAN_INTERVENTION",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [],
+      "selected_directions": [],
+      "expected_directions": [
+        "left",
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 3.0,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.0,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 1.0
+        },
+        "eligible_signatures": [],
+        "retained_verifiers": [],
+        "no_weighted_majority": true
+      },
+      "selection_probabilities": {},
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "scenario": "split_decision",
+      "policy": "confidence_weighted_consensus",
+      "seed": 20891109,
+      "status": "HUMAN_INTERVENTION",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [],
+      "selected_directions": [],
+      "expected_directions": [
+        "left",
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_times_confidence",
+        "total_weight": 1.9805,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 0.801,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.7395
+        },
+        "eligible_signatures": [],
+        "retained_verifiers": [],
+        "no_weighted_majority": true
+      },
+      "selection_probabilities": {},
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "scenario": "split_decision",
+      "policy": "reliability_weighted_probabilistic",
+      "seed": 20901109,
+      "status": "HUMAN_INTERVENTION",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [],
+      "selected_directions": [],
+      "expected_directions": [
+        "left",
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 2.55,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 0.9,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.85
+        },
+        "eligible_signatures": [],
+        "retained_verifiers": [],
+        "no_weighted_majority": true
+      },
+      "selection_probabilities": {},
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "scenario": "multiple_safe_alternatives",
+      "policy": "single_verifier",
+      "seed": 20961109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "left",
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-73855800": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "multiple_safe_alternatives",
+      "policy": "confidence",
+      "seed": 20971109,
+      "status": "VALIDATED",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "risk": 0.15
+        }
+      ],
+      "selected_directions": [
+        "right"
+      ],
+      "expected_directions": [
+        "left",
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {},
+      "selection_probabilities": {
+        "recovery-5c6970b8": 1.0
+      },
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "scenario": "multiple_safe_alternatives",
+      "policy": "equal_consensus",
+      "seed": 20981109,
+      "status": "HUMAN_INTERVENTION",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [],
+      "selected_directions": [],
+      "expected_directions": [
+        "left",
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 3.0,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 1.0,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 1.0
+        },
+        "eligible_signatures": [],
+        "retained_verifiers": [],
+        "no_weighted_majority": true
+      },
+      "selection_probabilities": {},
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "scenario": "multiple_safe_alternatives",
+      "policy": "confidence_weighted_consensus",
+      "seed": 20991109,
+      "status": "HUMAN_INTERVENTION",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [],
+      "selected_directions": [],
+      "expected_directions": [
+        "left",
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_times_confidence",
+        "total_weight": 1.963,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 0.792,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.731
+        },
+        "eligible_signatures": [],
+        "retained_verifiers": [],
+        "no_weighted_majority": true
+      },
+      "selection_probabilities": {},
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "scenario": "multiple_safe_alternatives",
+      "policy": "reliability_weighted_probabilistic",
+      "seed": 21001109,
+      "status": "HUMAN_INTERVENTION",
+      "correct_or_safe_abstention": true,
+      "safety_invariant": true,
+      "actions": [],
+      "selected_directions": [],
+      "expected_directions": [
+        "left",
+        "right"
+      ],
+      "reliability_weights": {
+        "kinematics": 0.9,
+        "task_logic": 0.85,
+        "object_state": 0.8
+      },
+      "weighting_metadata": {
+        "weighting": "reliability_only",
+        "total_weight": 2.55,
+        "support": {
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"right\"},\"risk\":0.15}]": 0.9,
+          "[{\"name\":\"move_robot\",\"parameters\":{\"direction\":\"left\"},\"risk\":0.15}]": 0.85
+        },
+        "eligible_signatures": [],
+        "retained_verifiers": [],
+        "no_weighted_majority": true
+      },
+      "selection_probabilities": {},
+      "message": "No recovery suggestions were provided."
+    }
+  ]
+}

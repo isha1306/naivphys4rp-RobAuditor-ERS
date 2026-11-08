@@ -1,0 +1,159 @@
+[recovery-config] policy=confidence, candidate_count=1, temperature=0.15, seed=None
+[scene] retained: Tracy robot + table/floor + canister1 + replacement canister + Pump1/Pump2
+[scene] removed unrelated bodies: canister2, BottleLarge, Needle, NeedleCap, BottleMedium, BottleSmall, expected_inserted_canister1, expected_inserted_canister2, needle_cap, needle_tool
+[scene] tray collision boxes preserved (Pump1/Pump2)
+[initial-perturbation] {'seed': 20261109, 'canister_xy_delta_m': [-0.0006519402232730649, 0.0009059296706558631], 'canister_yaw_delta_rad': 0.02755923225869315, 'canister_initial_pose_before': [0.5, 0.5, 1.0, 1.0, 0.0, 0.0, 0.0], 'joint_position_delta_rad': [-0.000693061136978384, 0.0017932452939409564, 0.0017880055667699448, 0.002310856401954881, 0.0011172318532228056, -0.0011246054407063567], 'joint_velocity_delta_rad_s': [-0.0010854781219988233, -0.013869837472188187, -0.0005471585471728442, 0.011884601333534, 0.005898652135247616, 0.010432794581394497], 'bounds': {'canister_xy_m': 0.00173469, 'canister_yaw_rad': 0.027872524181914004, 'joint_position_rad': 0.0030337313058165435, 'joint_velocity_rad_s': 0.015604}}
+[warning] Could not save perception image /home/coco/rec_ws/naivphys4rp/results/live_mujoco_perturbation/logs_20261108T083359Z/perception_grasp_20261109.png: No module named 'PIL'
+[perception] canister centre: [0.4987 0.4996 0.9428] m
+[perception] selected opening: Pump1
+
+[plan] selected left arm
+[motion] pre-pick: reached (0.6 mm)
+[motion] grasp: reached (1.3 mm)
+[failure-injection] Injecting failure at stage: grasp
+\n[failure] Simulation interrupted: Injected failure at stage 'grasp' (failure_id=injected_grasp)
+
+[recovery] injected failure: injected_grasp
+[recovery] verifier results: 3
+[recovery] evidence origin: live_mujoco_state
+[recovery] verifier: kinematics_verifier Ds: PASS Cf: 0.93 Ed: joint_state_and_motion checks passed from live MuJoCo state. Er: not_proposed
+[recovery] quadruplet: {'verifier_id': 'kinematics_verifier', 'Ds': {'decision': True, 'label': 'PASS'}, 'Cf': {'confidence': 0.93}, 'Ed': {'text': 'joint_state_and_motion checks passed from live MuJoCo state.', 'evidence': {'canister_available': True, 'canister_position_m': [0.49808447407059747, 0.499494519385389, 0.9413032244647038], 'canister_position_finite': True, 'joint_positions_finite': True, 'joint_velocities_finite': True, 'max_abs_joint_velocity_rad_s': 9.311030926672439, 'kinematic_emergency_speed_limit_rad_s': 12.0, 'contact_count': 6, 'canister_gripper_contact_count': 2, 'canister_environment_contact_count': 4, 'failure_stage': 'grasp', 'measurement_source': 'live_mujoco_state', 'focus': 'joint_state_and_motion'}, 'visual_evidence': [], 'metadata': {'format': 'structured_state', 'evidence_origin': 'live_mujoco_state', 'visual_observation_available': False}}, 'Er': None}
+[recovery] verifier: task_logic_verifier Ds: FAIL Cf: 0.8200000000000001 Ed: task_checkpoint_contract checks failed from live MuJoCo state. Er: GOB
+[recovery] quadruplet: {'verifier_id': 'task_logic_verifier', 'Ds': {'decision': False, 'label': 'FAIL'}, 'Cf': {'confidence': 0.8200000000000001}, 'Ed': {'text': 'task_checkpoint_contract checks failed from live MuJoCo state.', 'evidence': {'canister_available': True, 'canister_position_m': [0.49808447407059747, 0.499494519385389, 0.9413032244647038], 'canister_position_finite': True, 'joint_positions_finite': True, 'joint_velocities_finite': True, 'max_abs_joint_velocity_rad_s': 9.311030926672439, 'kinematic_emergency_speed_limit_rad_s': 12.0, 'contact_count': 6, 'canister_gripper_contact_count': 2, 'canister_environment_contact_count': 4, 'failure_stage': 'grasp', 'measurement_source': 'live_mujoco_state', 'focus': 'task_checkpoint_contract'}, 'visual_evidence': [], 'metadata': {'format': 'structured_state', 'evidence_origin': 'live_mujoco_state', 'visual_observation_available': False}}, 'Er': {'strategy': 'GOB', 'actions': [{'name': 'return_to_pre_grasp', 'parameters': {}, 'description': 'The expected task transition was not completed; restore the stage checkpoint.', 'estimated_risk': 0.2}], 'failure_type': 'grasp_failure'}}
+[recovery] verifier: object_state_verifier Ds: PASS Cf: 0.91 Ed: canister_pose_and_contacts checks passed from live MuJoCo state. Er: not_proposed
+[recovery] quadruplet: {'verifier_id': 'object_state_verifier', 'Ds': {'decision': True, 'label': 'PASS'}, 'Cf': {'confidence': 0.91}, 'Ed': {'text': 'canister_pose_and_contacts checks passed from live MuJoCo state.', 'evidence': {'canister_available': True, 'canister_position_m': [0.49808447407059747, 0.499494519385389, 0.9413032244647038], 'canister_position_finite': True, 'joint_positions_finite': True, 'joint_velocities_finite': True, 'max_abs_joint_velocity_rad_s': 9.311030926672439, 'kinematic_emergency_speed_limit_rad_s': 12.0, 'contact_count': 6, 'canister_gripper_contact_count': 2, 'canister_environment_contact_count': 4, 'failure_stage': 'grasp', 'measurement_source': 'live_mujoco_state', 'focus': 'canister_pose_and_contacts'}, 'visual_evidence': [], 'metadata': {'format': 'structured_state', 'evidence_origin': 'live_mujoco_state', 'visual_observation_available': False}}, 'Er': None}
+[recovery] test strategy: GOB
+[recovery] manager status: VALIDATED
+[recovery] message: A recovery plan passed validation.
+[recovery] validated candidate plans: 1
+[recovery] candidate selection probabilities:
+  - recovery-dd9d0667: 1.0000
+[recovery] proposed actions:
+  - return_to_pre_grasp
+[recovery] plan status: VALIDATED
+[recovery] accepted verifier suggestions: 1
+[recovery] actions were NOT executed.
+[recovery-execution] attempting validated GOB recovery
+[recovery-execution] opening gripper before retreat
+[recovery-execution] gradual gripper release: command=180
+[recovery-diagnostic] per-step canister motion during 75 release steps: max_speed=0.00426 m/s at step=74, final_speed=0.00426 m/s, interval_displacement=0.32 mm
+[recovery-diagnostic] velocity at peak: x=-0.00418, y=0.00066, z=0.00052 m/s
+[recovery-diagnostic] contacts at peak speed: 6
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.12 mm, normal_force=1.2769 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.20 mm, normal_force=1.7893 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.19 mm, normal_force=1.7871 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.10 mm, normal_force=1.2125 N
+[recovery-diagnostic] peak-contact left_right_pad1 <-> canister1: distance=-0.89 mm, normal_force=84.4218 N
+[recovery-diagnostic] peak-contact left_left_pad1 <-> canister1: distance=-0.81 mm, normal_force=85.5932 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.12 mm normal_force=1.2769 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.20 mm normal_force=1.7893 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.19 mm normal_force=1.7871 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.10 mm normal_force=1.2125 N
+[contact-diagnostic] pad: left_right_pad1 <-> canister1 distance=-0.89 mm normal_force=84.4218 N
+[contact-diagnostic] pad: left_left_pad1 <-> canister1 distance=-0.81 mm normal_force=85.5932 N
+[contact-diagnostic] canister-pad contact count: 2
+[contact-diagnostic] canister-environment contact count: 4
+[recovery-diagnostic] canister linear velocity: 0.00426 m/s (x=-0.00418, y=0.00066, z=0.00052)
+[recovery-diagnostic] displacement during release: 0.3 mm
+[recovery-execution] gradual gripper release: command=140
+[recovery-diagnostic] per-step canister motion during 75 release steps: max_speed=0.00430 m/s at step=74, final_speed=0.00430 m/s, interval_displacement=0.32 mm
+[recovery-diagnostic] velocity at peak: x=-0.00421, y=0.00075, z=0.00046 m/s
+[recovery-diagnostic] contacts at peak speed: 6
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.09 mm, normal_force=1.0825 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.20 mm, normal_force=1.8061 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.22 mm, normal_force=2.0767 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.14 mm, normal_force=1.5220 N
+[recovery-diagnostic] peak-contact left_right_pad1 <-> canister1: distance=-0.88 mm, normal_force=84.1048 N
+[recovery-diagnostic] peak-contact left_left_pad1 <-> canister1: distance=-0.81 mm, normal_force=85.7375 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.09 mm normal_force=1.0825 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.20 mm normal_force=1.8061 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.22 mm normal_force=2.0767 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.14 mm normal_force=1.5220 N
+[contact-diagnostic] pad: left_right_pad1 <-> canister1 distance=-0.88 mm normal_force=84.1048 N
+[contact-diagnostic] pad: left_left_pad1 <-> canister1 distance=-0.81 mm normal_force=85.7375 N
+[contact-diagnostic] canister-pad contact count: 2
+[contact-diagnostic] canister-environment contact count: 4
+[recovery-diagnostic] canister linear velocity: 0.00430 m/s (x=-0.00421, y=0.00075, z=0.00046)
+[recovery-diagnostic] displacement during release: 0.6 mm
+[recovery-execution] gradual gripper release: command=100
+[recovery-diagnostic] per-step canister motion during 75 release steps: max_speed=0.00632 m/s at step=5, final_speed=0.00440 m/s, interval_displacement=0.34 mm
+[recovery-diagnostic] velocity at peak: x=-0.00430, y=-0.00028, z=0.00462 m/s
+[recovery-diagnostic] contacts at peak speed: 6
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.07 mm, normal_force=0.4399 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.18 mm, normal_force=0.9184 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.20 mm, normal_force=0.7101 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.12 mm, normal_force=0.5135 N
+[recovery-diagnostic] peak-contact left_right_pad1 <-> canister1: distance=-0.83 mm, normal_force=43.4115 N
+[recovery-diagnostic] peak-contact left_left_pad1 <-> canister1: distance=-0.75 mm, normal_force=44.4690 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.12 mm normal_force=1.2079 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.16 mm normal_force=1.5456 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.09 mm normal_force=0.9862 N
+[contact-diagnostic] pad: left_right_pad1 <-> canister1 distance=-0.58 mm normal_force=11.8547 N
+[contact-diagnostic] pad: left_left_pad1 <-> canister1 distance=-0.44 mm normal_force=12.6053 N
+[contact-diagnostic] canister-pad contact count: 2
+[contact-diagnostic] canister-environment contact count: 3
+[recovery-diagnostic] canister linear velocity: 0.00440 m/s (x=-0.00438, y=0.00025, z=0.00026)
+[recovery-diagnostic] displacement during release: 1.0 mm
+[recovery-execution] gradual gripper release: command=60
+[recovery-diagnostic] per-step canister motion during 75 release steps: max_speed=0.07895 m/s at step=68, final_speed=0.06412 m/s, interval_displacement=2.99 mm
+[recovery-diagnostic] velocity at peak: x=0.07251, y=0.02723, z=-0.01533 m/s
+[recovery-diagnostic] contacts at peak speed: 4
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.04 mm, normal_force=0.0000 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.03 mm, normal_force=0.0000 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.01 mm, normal_force=1.5962 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.01 mm, normal_force=0.8253 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.02 mm normal_force=0.0000 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.08 mm normal_force=0.3389 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.11 mm normal_force=2.1511 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.03 mm normal_force=0.0000 N
+[contact-diagnostic] canister-pad contact count: 0
+[contact-diagnostic] canister-environment contact count: 4
+[recovery-diagnostic] canister linear velocity: 0.06412 m/s (x=0.06006, y=0.02206, z=-0.00427)
+[recovery-diagnostic] displacement during release: 2.2 mm
+[recovery-execution] gradual gripper release: command=20
+[recovery-diagnostic] per-step canister motion during 75 release steps: max_speed=0.06125 m/s at step=0, final_speed=0.01747 m/s, interval_displacement=0.23 mm
+[recovery-diagnostic] velocity at peak: x=0.05727, y=0.02151, z=-0.00289 m/s
+[recovery-diagnostic] contacts at peak speed: 4
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.01 mm, normal_force=0.0000 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.09 mm, normal_force=0.3367 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.13 mm, normal_force=2.1145 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.00 mm, normal_force=0.0000 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.05 mm normal_force=0.9846 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.05 mm normal_force=0.2916 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.06 mm normal_force=0.0408 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.05 mm normal_force=0.8914 N
+[contact-diagnostic] canister-pad contact count: 0
+[contact-diagnostic] canister-environment contact count: 4
+[recovery-diagnostic] canister linear velocity: 0.01747 m/s (x=-0.01625, y=-0.00629, z=-0.00134)
+[recovery-diagnostic] displacement during release: 2.0 mm
+[recovery-execution] gradual gripper release: command=0
+[recovery-diagnostic] per-step canister motion during 75 release steps: max_speed=0.01637 m/s at step=0, final_speed=0.00160 m/s, interval_displacement=0.06 mm
+[recovery-diagnostic] velocity at peak: x=-0.01518, y=-0.00599, z=-0.00122 m/s
+[recovery-diagnostic] contacts at peak speed: 4
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.05 mm, normal_force=0.9134 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.05 mm, normal_force=0.1877 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.06 mm, normal_force=0.1915 N
+[recovery-diagnostic] peak-contact table_collision <-> canister_base1: distance=-0.06 mm, normal_force=0.9176 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.07 mm normal_force=0.5876 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.05 mm normal_force=0.4737 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.05 mm normal_force=0.4971 N
+[contact-diagnostic] environment: table_collision <-> canister_base1 distance=-0.07 mm normal_force=0.6231 N
+[contact-diagnostic] canister-pad contact count: 0
+[contact-diagnostic] canister-environment contact count: 4
+[recovery-diagnostic] canister linear velocity: 0.00160 m/s (x=0.00148, y=0.00060, z=0.00001)
+[recovery-diagnostic] displacement during release: 1.9 mm
+[recovery-diagnostic] displacement after gripper opening: 1.9 mm
+[recovery-execution] returning to pre-grasp waypoint
+[motion] GOB-return-to-pre-grasp: reached (0.6 mm)
+[recovery-diagnostic] additional displacement during retreat: 0.0 mm
+[recovery-execution] postconditions: PASS
+[recovery-execution] pre-grasp position error: 0.6 mm
+[recovery-execution] canister displacement: 1.9 mm
+[recovery-execution] kinematic attachment: inactive
+[recovery-backend] backend=simulation
+[recovery-backend] status=SUCCEEDED
+[recovery-backend] attempts=1
+[recovery-backend] postconditions_verified=True
+[recovery-backend] message=Recovery execution and postconditions were verified.
+[recovery-backend] executed actions: return_to_pre_grasp
+

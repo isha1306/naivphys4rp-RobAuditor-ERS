@@ -1,0 +1,3619 @@
+{
+  "created_utc": "2026-11-08T07:46:08.929209+00:00",
+  "base_seed": 20261108,
+  "trials_per_case": 20,
+  "summary": {
+    "total_cases": 140,
+    "invariant_passes": 140,
+    "invariant_failures": 0,
+    "invariant_pass_rate": 1.0,
+    "by_case": {
+      "randomized_consensus": {
+        "trials": 20,
+        "invariant_passes": 20,
+        "invariant_failures": 0,
+        "invariant_pass_rate": 1.0,
+        "statuses": {
+          "VALIDATED": 20
+        }
+      },
+      "conflicting_recommendations": {
+        "trials": 20,
+        "invariant_passes": 20,
+        "invariant_failures": 0,
+        "invariant_pass_rate": 1.0,
+        "statuses": {
+          "VALIDATED": 20
+        }
+      },
+      "high_risk_recommendation": {
+        "trials": 20,
+        "invariant_passes": 20,
+        "invariant_failures": 0,
+        "invariant_pass_rate": 1.0,
+        "statuses": {
+          "VALIDATED": 20
+        }
+      },
+      "incomplete_ensemble": {
+        "trials": 20,
+        "invariant_passes": 20,
+        "invariant_failures": 0,
+        "invariant_pass_rate": 1.0,
+        "statuses": {
+          "HUMAN_INTERVENTION": 20
+        }
+      },
+      "uncertain_decisions": {
+        "trials": 20,
+        "invariant_passes": 20,
+        "invariant_failures": 0,
+        "invariant_pass_rate": 1.0,
+        "statuses": {
+          "VALIDATED": 20
+        }
+      },
+      "attempt_limit": {
+        "trials": 20,
+        "invariant_passes": 20,
+        "invariant_failures": 0,
+        "invariant_pass_rate": 1.0,
+        "statuses": {
+          "HUMAN_INTERVENTION": 20
+        }
+      },
+      "unsafe_state": {
+        "trials": 20,
+        "invariant_passes": 20,
+        "invariant_failures": 0,
+        "invariant_pass_rate": 1.0,
+        "statuses": {
+          "VALIDATED": 20
+        }
+      }
+    },
+    "scope": "Model-level synthesis stress test. It exercises randomized verifier recommendations and recovery-manager policy; it does not execute robot motion, perturb live MuJoCo sensor streams, or validate physical safety."
+  },
+  "trials": [
+    {
+      "case": "randomized_consensus",
+      "seed": 20261108,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "forward"
+          },
+          "estimated_risk": 0.0936197121844817
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "kinematics",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 14.8066,
+      "verifier_confidence_sample": 0.6384,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261109,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.2243028051074699
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "kinematics",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.7551,
+      "verifier_confidence_sample": 0.6635,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261110,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.2968602756923009
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "task_logic",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 4.4875,
+      "verifier_confidence_sample": 0.4614,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261111,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "forward"
+          },
+          "estimated_risk": 0.13398374789700504
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "kinematics",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 6.6663,
+      "verifier_confidence_sample": 0.9699,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261112,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "forward"
+          },
+          "estimated_risk": 0.1462265142072852
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 3.1606,
+      "verifier_confidence_sample": 0.6734,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261113,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.14014574969783583
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "object_state",
+        "task_logic"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.6798,
+      "verifier_confidence_sample": 0.8838,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261114,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.3267371791588926
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "kinematics",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 0.9611,
+      "verifier_confidence_sample": 0.7043,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261115,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.27286388089502195
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "task_logic",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 4.5126,
+      "verifier_confidence_sample": 0.6544,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261116,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.15349412145292282
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "kinematics",
+        "task_logic"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 3.1555,
+      "verifier_confidence_sample": 0.4869,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261117,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.09730892558961353
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "kinematics",
+        "task_logic"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 12.8876,
+      "verifier_confidence_sample": 0.3656,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261118,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.13315118308786575
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "object_state",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 13.5189,
+      "verifier_confidence_sample": 0.8816,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261119,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.2557903798970011
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "object_state",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 11.9114,
+      "verifier_confidence_sample": 0.8013,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261120,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.11690763948268977
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "object_state",
+        "task_logic"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 6.6515,
+      "verifier_confidence_sample": 0.6822,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261121,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.13501489274560577
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "object_state",
+        "task_logic"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 14.079,
+      "verifier_confidence_sample": 0.4618,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261122,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "forward"
+          },
+          "estimated_risk": 0.22672869836482393
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "kinematics",
+        "task_logic"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 14.6311,
+      "verifier_confidence_sample": 0.6732,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261123,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.23614407370220922
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "kinematics",
+        "task_logic"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 11.3227,
+      "verifier_confidence_sample": 0.9244,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261124,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.02112913209717391
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "kinematics",
+        "task_logic"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 12.3584,
+      "verifier_confidence_sample": 0.7822,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261125,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.16937924768813212
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "task_logic",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 12.6689,
+      "verifier_confidence_sample": 0.3561,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261126,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "forward"
+          },
+          "estimated_risk": 0.24149140947534348
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "kinematics",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 7.1202,
+      "verifier_confidence_sample": 0.3703,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "randomized_consensus",
+      "seed": 20261127,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.11976323476844082
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "object_state",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 0.5534,
+      "verifier_confidence_sample": 0.5174,
+      "expected_property": "a validated plan or a safe human-intervention outcome",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361108,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.31018180498879133
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic"
+      ],
+      "rejected_suggestions": {
+        "kinematics": "Conflicts with higher-priority suggestion(s): task_logic",
+        "object_state": "Conflicts with higher-priority suggestion(s): task_logic"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 12.1615,
+      "verifier_confidence_sample": 0.738,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361109,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.26402158288185756
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics"
+      ],
+      "rejected_suggestions": {
+        "object_state": "Conflicts with higher-priority suggestion(s): kinematics",
+        "task_logic": "Conflicts with higher-priority suggestion(s): kinematics"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 8.6521,
+      "verifier_confidence_sample": 0.7757,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361110,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.26802704526725013
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "task_logic": "Conflicts with higher-priority suggestion(s): object_state",
+        "kinematics": "Conflicts with higher-priority suggestion(s): object_state"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 5.2808,
+      "verifier_confidence_sample": 0.8154,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361111,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.23119752339266864
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "task_logic": "Conflicts with higher-priority suggestion(s): object_state",
+        "kinematics": "Conflicts with higher-priority suggestion(s): object_state"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 10.3766,
+      "verifier_confidence_sample": 0.6556,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361112,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.05287807022368726
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "kinematics"
+      ],
+      "rejected_suggestions": {
+        "object_state": "Conflicts with higher-priority suggestion(s): task_logic, kinematics"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 7.7615,
+      "verifier_confidence_sample": 0.6986,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361113,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.023588993206538796
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "task_logic": "Conflicts with higher-priority suggestion(s): object_state",
+        "kinematics": "Conflicts with higher-priority suggestion(s): object_state"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 0.749,
+      "verifier_confidence_sample": 0.6077,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361114,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.3372605416242929
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics"
+      ],
+      "rejected_suggestions": {
+        "task_logic": "Conflicts with higher-priority suggestion(s): kinematics",
+        "object_state": "Conflicts with higher-priority suggestion(s): kinematics"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 11.6812,
+      "verifier_confidence_sample": 0.7843,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361115,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.17445314127627654
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "kinematics": "Conflicts with higher-priority suggestion(s): object_state",
+        "task_logic": "Conflicts with higher-priority suggestion(s): object_state"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 0.048,
+      "verifier_confidence_sample": 0.6197,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361116,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.34599608665348297
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic"
+      ],
+      "rejected_suggestions": {
+        "object_state": "Conflicts with higher-priority suggestion(s): task_logic",
+        "kinematics": "Conflicts with higher-priority suggestion(s): task_logic"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 6.8039,
+      "verifier_confidence_sample": 0.6732,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361117,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.29258530207331734
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "task_logic": "Conflicts with higher-priority suggestion(s): object_state",
+        "kinematics": "Conflicts with higher-priority suggestion(s): object_state"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 11.7429,
+      "verifier_confidence_sample": 0.5426,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361118,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.19088923878381417
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics"
+      ],
+      "rejected_suggestions": {
+        "object_state": "Conflicts with higher-priority suggestion(s): kinematics",
+        "task_logic": "Conflicts with higher-priority suggestion(s): kinematics"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 12.679,
+      "verifier_confidence_sample": 0.5248,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361119,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.13939215469742014
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic"
+      ],
+      "rejected_suggestions": {
+        "object_state": "Conflicts with higher-priority suggestion(s): task_logic",
+        "kinematics": "Conflicts with higher-priority suggestion(s): task_logic"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 8.3869,
+      "verifier_confidence_sample": 0.6973,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361120,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.23864715464144096
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "kinematics": "Conflicts with higher-priority suggestion(s): object_state",
+        "task_logic": "Conflicts with higher-priority suggestion(s): object_state"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 1.0391,
+      "verifier_confidence_sample": 0.965,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361121,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.14722540452716495
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "task_logic": "Conflicts with higher-priority suggestion(s): object_state",
+        "kinematics": "Conflicts with higher-priority suggestion(s): object_state"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 14.2232,
+      "verifier_confidence_sample": 0.8542,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361122,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.28138884386101304
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "kinematics": "Conflicts with higher-priority suggestion(s): object_state",
+        "task_logic": "Conflicts with higher-priority suggestion(s): object_state"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 0.4685,
+      "verifier_confidence_sample": 0.3625,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361123,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.28900766768460573
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "kinematics"
+      ],
+      "rejected_suggestions": {
+        "object_state": "Conflicts with higher-priority suggestion(s): task_logic"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 11.8697,
+      "verifier_confidence_sample": 0.4692,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361124,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.33153561873112375
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics"
+      ],
+      "rejected_suggestions": {
+        "task_logic": "Conflicts with higher-priority suggestion(s): kinematics",
+        "object_state": "Conflicts with higher-priority suggestion(s): kinematics"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 14.6756,
+      "verifier_confidence_sample": 0.5326,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361125,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.14344919749584037
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "kinematics": "Conflicts with higher-priority suggestion(s): object_state",
+        "task_logic": "Conflicts with higher-priority suggestion(s): object_state"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 11.8554,
+      "verifier_confidence_sample": 0.4,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361126,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "left"
+          },
+          "estimated_risk": 0.10967891953503023
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state"
+      ],
+      "rejected_suggestions": {
+        "task_logic": "Conflicts with higher-priority suggestion(s): object_state",
+        "kinematics": "Conflicts with higher-priority suggestion(s): object_state"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 10.2193,
+      "verifier_confidence_sample": 0.7375,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "conflicting_recommendations",
+      "seed": 20361127,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "move_robot",
+          "parameters": {
+            "direction": "right"
+          },
+          "estimated_risk": 0.05298998311735048
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic"
+      ],
+      "rejected_suggestions": {
+        "object_state": "Conflicts with higher-priority suggestion(s): kinematics"
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 9.8237,
+      "verifier_confidence_sample": 0.7188,
+      "expected_property": "no conflicting action sequence is silently merged",
+      "invariant_pass": true,
+      "message": "Selected 1 of 2 validated candidate recovery plan(s) using risk-aware probabilistic sampling."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461108,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.3306103702620894
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.89 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 7.4954,
+      "verifier_confidence_sample": 0.9304,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461109,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.24961619971866908
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.78 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 6.1032,
+      "verifier_confidence_sample": 0.9048,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461110,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.029618061979943287
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.99 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 8.0966,
+      "verifier_confidence_sample": 0.3773,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461111,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.23649618885209506
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.90 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 5.4558,
+      "verifier_confidence_sample": 0.6628,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461112,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.3275277660657848
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.76 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 4.8188,
+      "verifier_confidence_sample": 0.9556,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461113,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.09245295741523821
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.90 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 3.8762,
+      "verifier_confidence_sample": 0.68,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461114,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.184247863875432
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.88 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 14.5379,
+      "verifier_confidence_sample": 0.5992,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461115,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.18481831066501256
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.95 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 7.6249,
+      "verifier_confidence_sample": 0.569,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461116,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.21006499720652747
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.92 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 5.0628,
+      "verifier_confidence_sample": 0.4421,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461117,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.20707477851679001
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.85 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 3.038,
+      "verifier_confidence_sample": 0.9364,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461118,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.12476661256828152
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.80 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 2.4892,
+      "verifier_confidence_sample": 0.3542,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461119,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.14304563624696837
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.80 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 14.9289,
+      "verifier_confidence_sample": 0.3923,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461120,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.33189357281190457
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.91 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 7.3029,
+      "verifier_confidence_sample": 0.9782,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461121,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.17125506583202602
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.95 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 0.1349,
+      "verifier_confidence_sample": 0.891,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461122,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.1779425220704965
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.80 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 7.6578,
+      "verifier_confidence_sample": 0.4039,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461123,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.1359333047362734
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.79 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 2.657,
+      "verifier_confidence_sample": 0.6207,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461124,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.16789357078510678
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.95 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 10.9336,
+      "verifier_confidence_sample": 0.5811,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461125,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.1473546997499933
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.95 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 3.0139,
+      "verifier_confidence_sample": 0.962,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461126,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.20594041437397148
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.95 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 5.7343,
+      "verifier_confidence_sample": 0.6363,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "high_risk_recommendation",
+      "seed": 20461127,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.26068745316076447
+        }
+      ],
+      "accepted_suggestions": [
+        "conservative_verifier"
+      ],
+      "rejected_suggestions": {
+        "high_risk_verifier": "Risk assessment: reject. Risk score 0.87 exceeds the allowed threshold 0.70."
+      },
+      "rejected_reasons": [],
+      "position_noise_mm": 5.4291,
+      "verifier_confidence_sample": 0.9226,
+      "expected_property": "a proposal above the configured risk limit is not executed/selected",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561108,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 5.2869,
+      "verifier_confidence_sample": 0.7647,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561109,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 5.3605,
+      "verifier_confidence_sample": 0.3687,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561110,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 13.2347,
+      "verifier_confidence_sample": 0.8293,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561111,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 2.0968,
+      "verifier_confidence_sample": 0.7111,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561112,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 13.2214,
+      "verifier_confidence_sample": 0.8797,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561113,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 8.2661,
+      "verifier_confidence_sample": 0.4627,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561114,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 7.3034,
+      "verifier_confidence_sample": 0.8589,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561115,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 3.378,
+      "verifier_confidence_sample": 0.6319,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561116,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 6.8108,
+      "verifier_confidence_sample": 0.614,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561117,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 11.3723,
+      "verifier_confidence_sample": 0.5595,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561118,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 12.2593,
+      "verifier_confidence_sample": 0.9352,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561119,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 4.1872,
+      "verifier_confidence_sample": 0.6895,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561120,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 13.4644,
+      "verifier_confidence_sample": 0.6131,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561121,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 10.0816,
+      "verifier_confidence_sample": 0.3547,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561122,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 5.4718,
+      "verifier_confidence_sample": 0.9539,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561123,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 14.3313,
+      "verifier_confidence_sample": 0.461,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561124,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 6.1413,
+      "verifier_confidence_sample": 0.6429,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561125,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 3.7453,
+      "verifier_confidence_sample": 0.7573,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561126,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 12.9416,
+      "verifier_confidence_sample": 0.6141,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "incomplete_ensemble",
+      "seed": 20561127,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": false,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": [],
+      "rejected_reasons": [],
+      "position_noise_mm": 13.4076,
+      "verifier_confidence_sample": 0.6791,
+      "expected_property": "no unsupported recovery action is fabricated",
+      "invariant_pass": true,
+      "message": "No recovery suggestions were provided."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661108,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.2732958279363768
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "kinematics",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 6.4266,
+      "verifier_confidence_sample": 0.7577,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661109,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.18340760823479269
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "kinematics",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 5.7217,
+      "verifier_confidence_sample": 0.543,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661110,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.12356050074462038
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "task_logic",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 4.9098,
+      "verifier_confidence_sample": 0.5321,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661111,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.14150275453458763
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.1186,
+      "verifier_confidence_sample": 0.3956,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661112,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.33817144981765046
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "kinematics",
+        "task_logic"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 3.2894,
+      "verifier_confidence_sample": 0.8184,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661113,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.17332350811736832
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "object_state",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 0.5502,
+      "verifier_confidence_sample": 0.4649,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661114,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.26366408680378883
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "task_logic",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.8988,
+      "verifier_confidence_sample": 0.5479,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661115,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.12940496675590443
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 8.8661,
+      "verifier_confidence_sample": 0.9274,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661116,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.18939910215420372
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "kinematics",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 8.6889,
+      "verifier_confidence_sample": 0.9223,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661117,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.1213376880690326
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "task_logic",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 10.1982,
+      "verifier_confidence_sample": 0.5269,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661118,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.2483227702565913
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "object_state",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 13.1206,
+      "verifier_confidence_sample": 0.9215,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661119,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.0812800728437483
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 6.4347,
+      "verifier_confidence_sample": 0.7157,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661120,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.20281147905265226
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 6.2898,
+      "verifier_confidence_sample": 0.4121,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661121,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.06336090371237967
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "kinematics",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 0.9454,
+      "verifier_confidence_sample": 0.7679,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661122,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.19395549958827177
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.5136,
+      "verifier_confidence_sample": 0.3836,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661123,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.05625262574299833
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "task_logic",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 13.9,
+      "verifier_confidence_sample": 0.4834,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661124,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.34866908335725333
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "object_state",
+        "task_logic"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 4.3471,
+      "verifier_confidence_sample": 0.9339,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661125,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.25365411388934694
+        }
+      ],
+      "accepted_suggestions": [
+        "task_logic",
+        "object_state",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.9463,
+      "verifier_confidence_sample": 0.7907,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661126,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.07640405003416482
+        }
+      ],
+      "accepted_suggestions": [
+        "kinematics",
+        "task_logic",
+        "object_state"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.8514,
+      "verifier_confidence_sample": 0.5306,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "uncertain_decisions",
+      "seed": 20661127,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "GOB"
+      ],
+      "actions": [
+        {
+          "name": "return_to_safe_waypoint",
+          "parameters": {},
+          "estimated_risk": 0.12170823389599324
+        }
+      ],
+      "accepted_suggestions": [
+        "object_state",
+        "task_logic",
+        "kinematics"
+      ],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 11.5057,
+      "verifier_confidence_sample": 0.6598,
+      "expected_property": "uncertain verifier outputs are retained and risk-checked",
+      "invariant_pass": true,
+      "message": "A recovery plan passed validation."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761108,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 14.4423,
+      "verifier_confidence_sample": 0.6495,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761109,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 6.3928,
+      "verifier_confidence_sample": 0.8041,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761110,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 5.9444,
+      "verifier_confidence_sample": 0.4425,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761111,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 8.2194,
+      "verifier_confidence_sample": 0.9215,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761112,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 9.2036,
+      "verifier_confidence_sample": 0.7169,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761113,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 0.2314,
+      "verifier_confidence_sample": 0.8709,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761114,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 10.7333,
+      "verifier_confidence_sample": 0.4319,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761115,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 9.0412,
+      "verifier_confidence_sample": 0.5228,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761116,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 2.882,
+      "verifier_confidence_sample": 0.9116,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761117,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 1.5622,
+      "verifier_confidence_sample": 0.9193,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761118,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 2.412,
+      "verifier_confidence_sample": 0.5404,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761119,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 9.3997,
+      "verifier_confidence_sample": 0.3587,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761120,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 10.1068,
+      "verifier_confidence_sample": 0.6566,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761121,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 12.4857,
+      "verifier_confidence_sample": 0.7736,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761122,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 3.5885,
+      "verifier_confidence_sample": 0.7196,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761123,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 12.0921,
+      "verifier_confidence_sample": 0.6236,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761124,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 13.5525,
+      "verifier_confidence_sample": 0.9075,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761125,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 11.2908,
+      "verifier_confidence_sample": 0.7411,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761126,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 5.9062,
+      "verifier_confidence_sample": 0.679,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "attempt_limit",
+      "seed": 20761127,
+      "status": "HUMAN_INTERVENTION",
+      "plan_present": true,
+      "strategies": [],
+      "actions": [],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {
+        "task_logic": "Risk assessment: requires_human. Maximum recovery attempts reached."
+      },
+      "rejected_reasons": [
+        "Risk assessment: requires_human. Maximum recovery attempts reached."
+      ],
+      "position_noise_mm": 8.8298,
+      "verifier_confidence_sample": 0.4241,
+      "expected_property": "attempt-limit exhaustion requires human intervention",
+      "invariant_pass": true,
+      "message": "No acceptable recovery actions could be generated."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861108,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 11.5046,
+      "verifier_confidence_sample": 0.54,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861109,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 10.0116,
+      "verifier_confidence_sample": 0.6386,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861110,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 5.9504,
+      "verifier_confidence_sample": 0.6468,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861111,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 4.6573,
+      "verifier_confidence_sample": 0.7959,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861112,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 10.4909,
+      "verifier_confidence_sample": 0.8722,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861113,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 11.8735,
+      "verifier_confidence_sample": 0.5067,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861114,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.4337,
+      "verifier_confidence_sample": 0.9081,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861115,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 12.6192,
+      "verifier_confidence_sample": 0.6626,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861116,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 5.0902,
+      "verifier_confidence_sample": 0.3594,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861117,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.9194,
+      "verifier_confidence_sample": 0.9386,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861118,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.8265,
+      "verifier_confidence_sample": 0.5236,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861119,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 1.6202,
+      "verifier_confidence_sample": 0.4537,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861120,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 0.2438,
+      "verifier_confidence_sample": 0.5046,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861121,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 5.2896,
+      "verifier_confidence_sample": 0.3519,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861122,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.711,
+      "verifier_confidence_sample": 0.716,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861123,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 10.5209,
+      "verifier_confidence_sample": 0.3719,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861124,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 2.9412,
+      "verifier_confidence_sample": 0.3913,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861125,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 8.7667,
+      "verifier_confidence_sample": 0.6889,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861126,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 8.4234,
+      "verifier_confidence_sample": 0.7963,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    },
+    {
+      "case": "unsafe_state",
+      "seed": 20861127,
+      "status": "VALIDATED",
+      "plan_present": true,
+      "strategies": [
+        "ESS"
+      ],
+      "actions": [
+        {
+          "name": "stop_robot",
+          "parameters": {},
+          "estimated_risk": 0.0
+        }
+      ],
+      "accepted_suggestions": [],
+      "rejected_suggestions": {},
+      "rejected_reasons": [],
+      "position_noise_mm": 14.3268,
+      "verifier_confidence_sample": 0.9268,
+      "expected_property": "unsafe state prioritizes the stop-only ESS plan",
+      "invariant_pass": true,
+      "message": "ESS plan validated. Execution and safe-state confirmation are still required."
+    }
+  ]
+}

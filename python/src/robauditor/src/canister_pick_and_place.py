@@ -33,6 +33,7 @@ from recovery.simulation_recovery_adapter import (
     process_injected_failure,
 )
 from recovery.execution_backend import RealRobotRecoveryBackend
+from recovery.execution_coordinator import RecoveryExecutionCoordinator
 from recovery.mujoco_recovery_backend import (
     build_mujoco_recovery_backend,
     make_mujoco_recovery_callbacks,
@@ -1864,21 +1865,136 @@ def execute_recovery_via_backend(
     )
     backend = build_mujoco_recovery_backend(callbacks)
     context = build_failure_context(failure)
-    result = backend.execute(outcome.plan, context)
 
-    print(f"[recovery-backend] backend={result.backend}")
-    print(f"[recovery-backend] success={result.success}")
+    def verify_simulation_postconditions(recovery_plan, recovery_context):
+        # Each recovery callback performs its action-specific checks. This
+        # shared check adds a final live-state sanity check before success is
+        # reported by the orchestration layer.
+        if not (
+            np.all(np.isfinite(data.qpos))
+            and np.all(np.isfinite(data.qvel))
+            and np.all(np.isfinite(data.xpos))
+        ):
+            return False
+
+        attachment = KINEMATIC_ATTACHMENT
+        if attachment is not None:
+            mount_id = int(attachment["mount_id"])
+            object_id = int(attachment["object_id"])
+            mount_pos = np.asarray(data.xpos[mount_id], dtype=float)
+            mount_rot = np.asarray(data.xmat[mount_id], dtype=float).reshape(3, 3)
+            expected_object_pos = (
+                mount_pos
+                + mount_rot @ np.asarray(attachment["rel_pos"], dtype=float)
+            )
+            actual_object_pos = np.asarray(data.xpos[object_id], dtype=float)
+            if np.linalg.norm(actual_object_pos - expected_object_pos) > 0.005:
+                return False
+        return True
+
+    coordinator = RecoveryExecutionCoordinator()
+    result = coordinator.execute(
+        outcome.plan,
+        context,
+        backend,
+        postcondition_checker=verify_simulation_postconditions,
+        max_retries=0,
+    )
+
+    print(f"[recovery-backend] backend=simulation")
+    print(f"[recovery-backend] status={result.status.value}")
+    print(f"[recovery-backend] attempts={result.attempts}")
+    print(f"[recovery-backend] postconditions_verified={result.postconditions_verified}")
     print(f"[recovery-backend] message={result.message}")
-    if result.executed_actions:
-        print(
-            "[recovery-backend] executed actions: "
-            + ", ".join(result.executed_actions)
-        )
-    if not result.success:
+    for execution in result.execution_results:
+        if execution.executed_actions:
+            print(
+                "[recovery-backend] executed actions: "
+                + ", ".join(execution.executed_actions)
+            )
+    if result.status.value != "SUCCEEDED":
         raise RuntimeError(
-            "Recovery backend refused or failed execution: " + result.message
+            "Recovery orchestration did not complete safely: " + result.message
         )
     return result
+
+
+def apply_initial_state_perturbation(
+    model,
+    data,
+    mujoco_module,
+    *,
+    seed: int,
+    canister_xy_m: float = 0.0,
+    canister_yaw_rad: float = 0.0,
+    joint_position_rad: float = 0.0,
+    joint_velocity_rad_s: float = 0.0,
+):
+    """Apply bounded, seeded perturbations before perception and task planning.
+
+    Perturbations are deliberately small and applied to the selected left arm
+    and canister free joint only. This is an experimental simulation fixture,
+    not a model of calibrated sensor or actuator noise.
+    """
+    rng = np.random.default_rng(seed)
+    canister_body_id = named_id(
+        model, mujoco_module.mjtObj.mjOBJ_BODY, CANISTER_BODY
+    )
+    free_joint_id = next(
+        (
+            joint_id for joint_id in range(model.njnt)
+            if int(model.jnt_bodyid[joint_id]) == canister_body_id
+            and int(model.jnt_type[joint_id]) == int(mujoco_module.mjtJoint.mjJNT_FREE)
+        ),
+        -1,
+    )
+    if free_joint_id < 0:
+        raise RuntimeError("Canister free joint was not found; cannot perturb pose.")
+    qpos_address = int(model.jnt_qposadr[free_joint_id])
+    initial_canister = data.qpos[qpos_address:qpos_address + 7].copy()
+    xy_delta = rng.uniform(-canister_xy_m, canister_xy_m, size=2)
+    yaw_delta = float(rng.uniform(-canister_yaw_rad, canister_yaw_rad))
+    data.qpos[qpos_address:qpos_address + 2] += xy_delta
+    # MuJoCo free-joint quaternion is w,x,y,z. Compose a world-z yaw offset.
+    half_yaw = yaw_delta / 2.0
+    yaw_quat = np.array([math.cos(half_yaw), 0.0, 0.0, math.sin(half_yaw)])
+    q = data.qpos[qpos_address + 3:qpos_address + 7].copy()
+    w1, x1, y1, z1 = yaw_quat
+    w2, x2, y2, z2 = q
+    data.qpos[qpos_address + 3:qpos_address + 7] = np.array([
+        w1*w2 - x1*x2 - y1*y2 - z1*z2,
+        w1*x2 + x1*w2 + y1*z2 - z1*y2,
+        w1*y2 - x1*z2 + y1*w2 + z1*x2,
+        w1*z2 + x1*y2 - y1*x2 + z1*w2,
+    ])
+    arm_qpos_ids, arm_dof_ids, _ = arm_joint_indices(model, ARM_TO_USE)
+    applied_joint_delta = np.zeros(len(arm_qpos_ids))
+    if joint_position_rad > 0:
+        applied_joint_delta = rng.uniform(
+            -joint_position_rad, joint_position_rad, size=len(arm_qpos_ids)
+        )
+        data.qpos[arm_qpos_ids] += applied_joint_delta
+    applied_joint_velocity = np.zeros(len(arm_dof_ids))
+    if joint_velocity_rad_s > 0:
+        applied_joint_velocity = rng.uniform(
+            -joint_velocity_rad_s, joint_velocity_rad_s, size=len(arm_dof_ids)
+        )
+        data.qvel[arm_dof_ids] = applied_joint_velocity
+    mujoco_module.mj_forward(model, data)
+    return {
+        "seed": int(seed),
+        "canister_xy_delta_m": xy_delta.tolist(),
+        "canister_yaw_delta_rad": yaw_delta,
+        "canister_initial_pose_before": initial_canister.tolist(),
+        "joint_position_delta_rad": applied_joint_delta.tolist(),
+        "joint_velocity_delta_rad_s": applied_joint_velocity.tolist(),
+        "bounds": {
+            "canister_xy_m": canister_xy_m,
+            "canister_yaw_rad": canister_yaw_rad,
+            "joint_position_rad": joint_position_rad,
+            "joint_velocity_rad_s": joint_velocity_rad_s,
+        },
+    }
 
 
 def main():
@@ -1903,6 +2019,16 @@ def main():
     parser.add_argument("--no-viewer", action="store_true", help="Run without interactive MuJoCo viewer")
     parser.add_argument("--save-perception", default="canister_tray_perception.png", help="Save RGB image used for perception")
     parser.add_argument("--settle-seconds", type=float, default=2.0, help="Physics settling time after release")
+    parser.add_argument("--perturb-seed", type=int, default=None,
+                        help="Seed for bounded initial-state perturbations")
+    parser.add_argument("--canister-xy-perturb-m", type=float, default=0.0,
+                        help="Maximum absolute x/y canister offset in metres")
+    parser.add_argument("--canister-yaw-perturb-deg", type=float, default=0.0,
+                        help="Maximum absolute canister yaw offset in degrees")
+    parser.add_argument("--joint-position-perturb-deg", type=float, default=0.0,
+                        help="Maximum absolute selected-arm joint offset in degrees")
+    parser.add_argument("--joint-velocity-perturb-rad-s", type=float, default=0.0,
+                        help="Maximum absolute selected-arm joint velocity in rad/s")
     parser.add_argument(
         "--inject-failure",
         choices=FAILURE_STAGES,
@@ -1935,6 +2061,22 @@ def main():
     )
     args = parser.parse_args()
 
+    perturb_values = (
+        args.canister_xy_perturb_m,
+        args.canister_yaw_perturb_deg,
+        args.joint_position_perturb_deg,
+        args.joint_velocity_perturb_rad_s,
+    )
+    if any(value < 0 for value in perturb_values):
+        parser.error("Perturbation magnitudes must be non-negative")
+    if args.canister_xy_perturb_m > 0.015:
+        parser.error("Canister XY perturbation is limited to 0.015 m")
+    if args.canister_yaw_perturb_deg > 10.0:
+        parser.error("Canister yaw perturbation is limited to 10 degrees")
+    if args.joint_position_perturb_deg > 2.0:
+        parser.error("Joint position perturbation is limited to 2 degrees")
+    if args.joint_velocity_perturb_rad_s > 0.5:
+        parser.error("Joint velocity perturbation is limited to 0.5 rad/s")
     if args.recovery_candidate_count < 1:
         parser.error("--recovery-candidate-count must be at least 1")
     if args.recovery_sampling_temperature <= 0:
@@ -1989,6 +2131,23 @@ def main():
     data = mujoco.MjData(model)
     planning_data = mujoco.MjData(model)
     reset_to_initial_pose(model, data)
+    if any((
+        args.canister_xy_perturb_m,
+        args.canister_yaw_perturb_deg,
+        args.joint_position_perturb_deg,
+        args.joint_velocity_perturb_rad_s,
+    )):
+        perturbation = apply_initial_state_perturbation(
+            model, data, mujoco,
+            seed=0 if args.perturb_seed is None else args.perturb_seed,
+            canister_xy_m=args.canister_xy_perturb_m,
+            canister_yaw_rad=math.radians(args.canister_yaw_perturb_deg),
+            joint_position_rad=math.radians(args.joint_position_perturb_deg),
+            joint_velocity_rad_s=args.joint_velocity_perturb_rad_s,
+        )
+        print("[initial-perturbation] " + str(perturbation))
+    else:
+        print("[initial-perturbation] disabled; baseline initial state")
 
     # Check that the requested model really is the runtime model this script
     # expects; fail early rather than silently using another Tracy scene.
