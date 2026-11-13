@@ -13,6 +13,7 @@ import argparse
 import copy
 import math
 import os
+from contextlib import nullcontext
 import tempfile
 import time
 import xml.etree.ElementTree as ET
@@ -88,14 +89,48 @@ ACTIVE_VIEWER = None
 ARM_TO_USE = "left"  # Fixed in code: use the left Tracy arm.
 
 
-def sync_viewer():
-    """Refresh the passive viewer during control without affecting physics."""
+def viewer_data_lock():
+    """Return MuJoCo passive-viewer lock, or a no-op context without a viewer."""
     global ACTIVE_VIEWER
-    if ACTIVE_VIEWER is not None:
+    if ACTIVE_VIEWER is None:
+        return nullcontext()
+    try:
+        return ACTIVE_VIEWER.lock()
+    except Exception as exc:
+        print(f"[viewer] unable to acquire viewer data lock: {exc}")
+        return nullcontext()
+
+
+def sync_viewer():
+    """Synchronize the passive viewer after releasing any data lock."""
+    global ACTIVE_VIEWER
+    viewer = ACTIVE_VIEWER
+    if viewer is not None:
         try:
-            ACTIVE_VIEWER.sync()
-        except Exception:
+            viewer.sync()
+        except Exception as exc:
+            print(f"[viewer] synchronization failed; disabling viewer updates: {exc}")
             ACTIVE_VIEWER = None
+
+
+def hold_viewer_after_recovery(viewer):
+    """Keep the recovered MuJoCo state visible until the viewer is closed."""
+    if viewer is None:
+        return
+    try:
+        if not viewer.is_running():
+            return
+        print("[viewer] recovery finished; simulation is paused at the recovered state.")
+        print("[viewer] inspect the robot/canister, then close the MuJoCo window to exit.")
+        while viewer.is_running():
+            try:
+                viewer.sync()
+            except Exception as exc:
+                print(f"[viewer] synchronization stopped: {exc}")
+                break
+            time.sleep(0.02)
+    except Exception as exc:
+        print(f"[viewer] unable to hold recovery view open: {exc}")
 
 
 @dataclass
@@ -574,19 +609,28 @@ def move_to_joint_target(model, data, arm_name: str, q_target: np.ndarray, settl
     be used as a real-robot control method.
     """
     qpos_ids, _, actuator_ids = arm_joint_indices(model, arm_name)
-    q_start = data.qpos[qpos_ids].copy()
-    data.ctrl[actuator_ids] = q_target
+    with viewer_data_lock():
+        q_start = data.qpos[qpos_ids].copy()
+        data.ctrl[actuator_ids] = q_target
+
     for point in interpolate_qpos(q_start, q_target, max_step=0.012):
-        data.qpos[qpos_ids] = point
+        # The passive viewer renders on another thread. Protect shared MuJoCo
+        # state while changing qpos or forwarding the model, then sync outside
+        # the lock so the viewer can consume the updated state.
+        with viewer_data_lock():
+            data.qpos[qpos_ids] = point
+            mujoco.mj_forward(model, data)
+            update_kinematic_attachment(model, data)
+            mujoco.mj_forward(model, data)
+        sync_viewer()
+
+    with viewer_data_lock():
+        data.qpos[qpos_ids] = q_target
+        data.ctrl[actuator_ids] = q_target
         mujoco.mj_forward(model, data)
         update_kinematic_attachment(model, data)
         mujoco.mj_forward(model, data)
-        sync_viewer()
-    data.qpos[qpos_ids] = q_target
-    data.ctrl[actuator_ids] = q_target
-    mujoco.mj_forward(model, data)
-    update_kinematic_attachment(model, data)
-    mujoco.mj_forward(model, data)
+    sync_viewer()
 
 
 JOINT_FINAL_TICKS = 1000
@@ -2408,10 +2452,19 @@ def main():
                 "[recovery-execution] autonomous execution disabled for "
                 f"failure stage '{failure.stage}'."
             )
+
+        # Unlike the normal-success path, the exception path previously
+        # closed the passive viewer immediately after recovery. Keep the
+        # recovered pose on screen until the user closes the window.
+        hold_viewer_after_recovery(viewer)
     finally:
-        if viewer is not None:
-            viewer.close()
         ACTIVE_VIEWER = None
+        if viewer is not None:
+            try:
+                if viewer.is_running():
+                    viewer.close()
+            except Exception as exc:
+                print(f"[viewer] shutdown warning: {exc}")
 
 
 if __name__ == "__main__":
